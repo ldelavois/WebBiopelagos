@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebBiopelagos.Web", "WebBiopelagos.Web\WebBiopelagos.Web.csproj", "{351657DC-0490-4D28-B890-4135398B1374}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{351657DC-0490-4D28-B890-4135398B1374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{351657DC-0490-4D28-B890-4135398B1374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{351657DC-0490-4D28-B890-4135398B1374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{351657DC-0490-4D28-B890-4135398B1374}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D305352-399A-4C76-A06C-4D1EB75D564C}
+	EndGlobalSection
+EndGlobal

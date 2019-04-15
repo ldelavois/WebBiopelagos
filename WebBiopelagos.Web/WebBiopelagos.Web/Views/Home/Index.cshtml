@@ -1,0 +1,140 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    ViewData["Message"] = "Wallalis map";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+<p><a asp-area="" asp-controller="SetBases" asp-action="Index">Clic here to see data</a></p>
+
+
+
+
+<link rel="stylesheet" href="~/lib/leaflet/leaflet.css" />
+<script src="~/lib/leaflet/leaflet.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<div id="map">
+</div>
+
+<script>
+
+    // initialize the map
+    var map = L.map('map').setView([-13.196583333333333, 183.608550000000000], 8);
+
+    // load a tile layer
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    //// load GeoJSON from an external file
+    //$.getJSON("wallalis.geojson", function (data) {
+    //    // add GeoJSON layer to the map once the file is loaded
+    //    L.geoJSON(data).addTo(map);
+    //});
+
+    function onEachFeature(feature, layer){
+        // does this feature have a property named popupContent?
+        var popupContent = "<b>Wallalis trip</b></br>";// +"Set No: " + feature.properties.name;
+        layer.bindPopup(popupContent);
+    }
+
+    var geojsonFeature = L.geoJSON({
+        "type": "FeatureCollection",
+        "features": [
+            {
+                "type": "Feature",
+                "properties":
+                {
+                    "name": "0101"
+                },
+                "geometry":
+                {
+                    "type": "Point",
+                    "coordinates": [183.608550000000000, -13.196583333333333]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "name": "0301"
+                },
+                "geometry":
+                {
+                    "type": "Point",
+                    "coordinates": [182.121383333333333, -12.296266666666667]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties":
+                {
+                    "name": "0501"
+                },
+                "geometry":
+                {
+                    "type": "Point",
+                    "coordinates": [181.784666666666667, -14.289650000000000]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties":
+                {
+                    "name": "0502"
+                },
+                "geometry":
+                {
+                    "type": "Point",
+                    "coordinates": [181.791583333333333, -14.304433333333333]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties":
+                {
+                    "name": "0601"
+                },
+                "geometry":
+                {
+                    "type": "Point",
+                    "coordinates": [183.081000000000000, -13.590833333333333]
+                }
+            },
+            {
+                "type": "Feature",
+
+                "properties": {
+                    "name": "0901"
+                },
+                "geometry":
+                {
+                    "type": "Point",
+                    "coordinates": [183.695833333333333, -13.251500000000000]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "name": "1001"
+                },
+                "geometry":
+                {
+                    "type": "Point",
+                    "coordinates": [183.931183333333333, -13.366533333333333]
+                }
+            }
+        ]
+    }).addTo(map);
+
+    geojsonFeature.bindPopup('<b>Wallalis trip</b></br>Set number: </br><a href="Setbases">Clic to see data</a>');
+
+    //L.geoJSON(geojsonFeature, {
+    //    onEachFeature: onEachFeature
+    //}).addTo(map);
+
+
+</script>
+
+<br /><p>Clic on a station link to see data for each station</p>
+
