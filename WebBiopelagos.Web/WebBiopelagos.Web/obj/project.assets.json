@@ -13562,11 +13562,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ludovicd\\source\\repos\\Web-Biopelagos\\WebBiopelagos.Web\\WebBiopelagos.Web\\WebBiopelagos.Web.csproj",
+      "projectUniqueName": "C:\\Users\\ludovicd\\source\\repos\\WebBiopelagos\\WebBiopelagos.Web\\WebBiopelagos.Web\\WebBiopelagos.Web.csproj",
       "projectName": "WebBiopelagos.Web",
-      "projectPath": "C:\\Users\\ludovicd\\source\\repos\\Web-Biopelagos\\WebBiopelagos.Web\\WebBiopelagos.Web\\WebBiopelagos.Web.csproj",
+      "projectPath": "C:\\Users\\ludovicd\\source\\repos\\WebBiopelagos\\WebBiopelagos.Web\\WebBiopelagos.Web\\WebBiopelagos.Web.csproj",
       "packagesPath": "C:\\Users\\ludovicd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ludovicd\\source\\repos\\Web-Biopelagos\\WebBiopelagos.Web\\WebBiopelagos.Web\\obj\\",
+      "outputPath": "C:\\Users\\ludovicd\\source\\repos\\WebBiopelagos\\WebBiopelagos.Web\\WebBiopelagos.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

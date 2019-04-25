@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "About";
+    ViewData["Title"] = "À propos";
 }
 
 <!DOCTYPE html>
@@ -10,6 +10,9 @@
 
 <body>
     <h2>@ViewData["Title"]</h2>
+
+    <p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>
+
     <h3>@ViewData["Message"]</h3>
 
     <p>Biodiversité des écosystèmes pélagiques océaniques pour une meilleure conservation et gestion des zones naturelles exceptionnelles de Nouvelle-Calédonie et de Wallis & Futuna</p>

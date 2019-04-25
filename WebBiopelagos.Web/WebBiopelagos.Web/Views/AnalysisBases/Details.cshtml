@@ -1,0 +1,102 @@
+﻿@model WebBiopelagos.Web.Models.AnalysisBase
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AnalysisBase</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AnalysisDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnalysisDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LocationDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TmpId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TmpId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnalyzedByOld)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnalyzedByOld)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LaboratoryIdOld)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LaboratoryIdOld)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnalyserStaff)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnalyserStaff.CountryId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnalyserStaffId2Navigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnalyserStaffId2Navigation.CountryId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnalyserStaffId3Navigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnalyserStaffId3Navigation.CountryId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnalysisSampleType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnalysisSampleType.AnalysisTypeId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnalysisType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnalysisType.AnalysisTypeId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LaboratoryLocation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LaboratoryLocation.CountryId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SampleBase)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SampleBase.SampleNo)
+        </dd>
+    </dl>
+</div>
+<div>
+    @*<a asp-action="Edit" asp-route-id="@Model.AnalysisBaseId">Edit</a> |*@
+    <a asp-action="Index">Retour</a>
+</div>

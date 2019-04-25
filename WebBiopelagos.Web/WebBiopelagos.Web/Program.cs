@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using WebBiopelagos.Web.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace WebBiopelagos.Web
 {
@@ -19,7 +20,7 @@ namespace WebBiopelagos.Web
                 var services = scope.ServiceProvider;
 
                 try
-                { 
+                {
                 }
                 catch (Exception ex)
                 {
@@ -28,7 +29,14 @@ namespace WebBiopelagos.Web
                 }
             }
 
-            host.Run();
+            //using (var context = new BioDaSysContext())
+            //{
+            //    var sets = context.SetBase
+            //        .Where(s => s.Comment.Contains("Wallalis"))
+            //        .ToList();
+            //}
+
+                host.Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebBiopelagos.Web.Models;
 
@@ -17,33 +19,37 @@ namespace WebBiopelagos.Web.Controllers
         }
 
         // GET: SetBases
-        public async Task<IActionResult> Index(string sortOrder)
+        public async Task<IActionResult> Index(int? id)
         {
-            ViewData["TripIdSortParm"] = String.IsNullOrEmpty(sortOrder) ? "tripId_desc" : "";
-            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
-            var students = from s in _context.SetBase
-                           select s;
-            switch (sortOrder)
+            if (id == null)
             {
-                case "name_desc":
-                    students = students.OrderByDescending(s => s.TripId);
-                    break;
-                case "Date":
-                    students = students.OrderBy(s => s.SetDateLocal);
-                    break;
-                case "date_desc":
-                    students = students.OrderByDescending(s => s.SetDateLocal);
-                    break;
-                default:
-                    students = students.OrderBy(s => s.TripId);
-                    break;
+                var bioDaSysContext = _context.SetBase
+                .Where(s => s.TripId == 6440)
+                .Include(s => s.DayNight)
+                .Include(s => s.Gear)
+                .Include(s => s.Staff)
+                .Include(s => s.Trip);
+
+                return View(await bioDaSysContext.ToListAsync());
             }
-            return View(await students.AsNoTracking().ToListAsync());
+
+            else
+            {
+                var bioDaSysContext = _context.SetBase
+                                .Where(s => s.SetBaseId == id)
+                                .Where(s => s.TripId ==6440)
+                                .Include(s => s.DayNight)
+                                .Include(s => s.Gear)
+                                .Include(s => s.Staff)
+                                .Include(s => s.Trip);
+
+                return View(await bioDaSysContext.ToListAsync());
+
+            }
+
+
+
         }
-
-
-
-
 
         // GET: SetBases/Details/5
         public async Task<IActionResult> Details(int? id)

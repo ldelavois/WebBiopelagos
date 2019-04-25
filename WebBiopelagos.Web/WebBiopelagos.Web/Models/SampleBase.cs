@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebBiopelagos.Web.Models
 {
@@ -19,47 +20,94 @@ namespace WebBiopelagos.Web.Models
             SamplePendingAnalysis = new HashSet<SamplePendingAnalysis>();
         }
 
+        [Display(Name = "Numéro")]
+        public string SampleNo { get; set; }
+
+        [Display(Name = "Disponibilité")]
+        public bool IsAvailable { get; set; }
+
+        [Display(Name = "En attente d'analyse")]
+        public bool? IsPendingAnalysis { get; set; }
+
+        [Display(Name = "Analysé")]
+        public bool? IsAnalyzed { get; set; }
+
+        [Display(Name = "Equipe qualité")]
+        public short? QualityStaffId { get; set; }
+
+        [Display(Name = "Date position")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime? LocationDate { get; set; }
+
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime? InventoryDate { get; set; }
+
+        [Display(Name = "Détail position")]
+        public string LocationDetails { get; set; }
+
+        [Display(Name = "Commentaires")]
+        public string Comment { get; set; }
+
+        [Display(Name = "Date de création")]
+        public DateTime CreationDate { get; set; }
+
+        public int? TmpId { get; set; }
+
+        [Display(Name = "Numéro Espèce")]
+        public Fish Fish { get; set; }
+
+        [Display(Name = "Position congélateur")]
+        public FreezerLocation FreezerLocation { get; set; }
+
+        [Display(Name = "Position inventaire")]
+        public Location InventoryLocation { get; set; }
+
+        [Display(Name = "Equipe inventaire")]
+        public Staff InventoryStaff { get; set; }
+
+        [Display(Name = "Position propriétaire")]
+        public Location OwnershipLocation { get; set; }
+
+        [Display(Name = "Qualité stockage")]
+        public StorageQuality StorageQuality { get; set; }
+
+        [Display(Name = "Condition qualité stockage")]
+        public StorageQualityCondition StorageQualityCondition { get; set; }
+
+        public ConditionSampleType Tissue { get; set; }
+
+        [Display(Name = "Condition tissue")]
+        public TissueCondition TissueCondition { get; set; }
+
+        [Display(Name = "navigation tissue")]
+        public PositionSampleType TissueNavigation { get; set; }
+
+        [Display(Name = "Position tissue")]
+        public TissuePosition TissuePosition { get; set; }
+
+        [Display(Name = "Type tissue")]
+        public TissueType TissueType { get; set; }
+
         public int SampleBaseId { get; set; }
         public int FishId { get; set; }
-        public string SampleNo { get; set; }
         public short OwnershipLocationId { get; set; }
         public double? PriceUsd { get; set; }
-        public bool IsAvailable { get; set; }
         public bool IsLost { get; set; }
         public DateTime? MissingDate { get; set; }
         public bool IsDiscarded { get; set; }
-        public bool? IsPendingAnalysis { get; set; }
-        public bool? IsAnalyzed { get; set; }
         public string TissueTypeId { get; set; }
         public string TissuePositionId { get; set; }
         public string TissueConditionId { get; set; }
         public string StorageQualityId { get; set; }
-        public short? QualityStaffId { get; set; }
         public short? LastLocationId { get; set; }
-        public DateTime? LocationDate { get; set; }
         public short? InventoryLocationId { get; set; }
-        public DateTime? InventoryDate { get; set; }
         public short? InventoryStaffId { get; set; }
         public byte? FreezerLocationId { get; set; }
-        public string LocationDetails { get; set; }
-        public string Comment { get; set; }
-        public DateTime CreationDate { get; set; }
         public bool IsTransfered { get; set; }
         public string InventoryLocationIdOld { get; set; }
-        public int? TmpId { get; set; }
 
-        public Fish Fish { get; set; }
-        public FreezerLocation FreezerLocation { get; set; }
-        public Location InventoryLocation { get; set; }
-        public Staff InventoryStaff { get; set; }
-        public Location OwnershipLocation { get; set; }
-        public StorageQuality StorageQuality { get; set; }
-        public StorageQualityCondition StorageQualityCondition { get; set; }
-        public ConditionSampleType Tissue { get; set; }
-        public TissueCondition TissueCondition { get; set; }
-        public PositionSampleType TissueNavigation { get; set; }
-        public TissuePosition TissuePosition { get; set; }
-        public TissueType TissueType { get; set; }
+
+
         public ICollection<AnalysisBase> AnalysisBase { get; set; }
         public ICollection<ChildSpecimenSampleLink> ChildSpecimenSampleLink { get; set; }
         public ICollection<DbTransfer> DbTransfer { get; set; }

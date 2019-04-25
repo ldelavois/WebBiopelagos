@@ -1,201 +1,213 @@
 ﻿@model IEnumerable<WebBiopelagos.Web.Models.SetBase>
 
-    @{
-        ViewData["Title"] = "Wallalis Data";
-    }
+@{
+    ViewData["Title"] = "Stations";
+}
 
-    <h2>Index</h2>
+<h2>@ViewData["Title"]</h2>
+<p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>
+<h3>Campagne Wallalis</h3>
 
-    <p>
-        @*<a asp-action="Create">Create New</a>*@
-    </p>
-    <table class="table">
-        <thead>
-            <tr>
-                @*<th>
-                        @Html.DisplayNameFor(model => model.T2LogId)
-                    </th>*@
-                <th>
-                        @Html.DisplayNameFor(model => model.TripId)
-</th>
-                <th>
-                    @Html.DisplayNameFor(model => model.SetNo)
-                </th>
+<p>
+    @*<a asp-action="Create">Create New</a>*@
+</p>
+<table class="table">
+    <thead>
+        <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SetBaseId)
+        </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.Trip)
+        </th>*@
+            @*<th>
+            @Html.DisplayNameFor(model => model.T2LogId)
+        </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.SetNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SetDateLocal)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.SetTimeLocal)
+        </th>*@
+            @*<th>
+            @Html.DisplayNameFor(model => model.SchoolAssociationId)
+        </th>*@
+            @*<th>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </th>*@
+            @*<th>
+            @Html.DisplayNameFor(model => model.SetEndDateLocal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SetEndTimeLocal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndLatitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndLongitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BaitList)
+        </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.LatitudeDec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LongitudeDec)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.EezSubcountryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EezClosest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LonghurstCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BetRegionId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SstCelsius)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BathyMeters)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OniNoaa)
+        </th>*@
 
-                <th>
-                    @Html.DisplayNameFor(model => model.SetDateLocal)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.SetTimeLocal)
-                </th>
-                @*<th>
-                        @Html.DisplayNameFor(model => model.SchoolAssociationId)
-                    </th>*@
-                <th>
-                    @Html.DisplayNameFor(model => model.Latitude)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Longitude)
-                </th>
-                @*<th>
-                        @Html.DisplayNameFor(model => model.SetEndDateLocal)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.SetEndTimeLocal)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.EndLatitude)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.EndLongitude)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.BaitList)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.LatitudeDec)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.LongitudeDec)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.EezSubcountryId)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.EezClosest)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.LonghurstCode)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.BetRegionId)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.SstCelsius)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.BathyMeters)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.OniNoaa)
-                    </th>*@
-                <th>
-                    @Html.DisplayNameFor(model => model.Comment)
-                </th>
-                @*<th>
-                        @Html.DisplayNameFor(model => model.CreationDate)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.LogIdTubsOld)
-                    </th>*@
-                <th>
-                    @Html.DisplayNameFor(model => model.DayNight)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Gear)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Staff)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.LogIdTubsOld)
+        </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.DayNight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
 
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    @*<td>
-                            @Html.DisplayFor(modelItem => item.T2LogId)
-                        </td>*@
-                    <td>
-                        @Html.DisplayFor(modelItem => item.TripId)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.SetNo)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.SetDateLocal)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.SetTimeLocal)
-                    </td>
-                    @*<td>
-                            @Html.DisplayFor(modelItem => item.SchoolAssociationId)
-                        </td>*@
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Latitude)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Longitude)
-                    </td>
-                    @*<td>
-                            @Html.DisplayFor(modelItem => item.SetEndDateLocal)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.SetEndTimeLocal)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.EndLatitude)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.EndLongitude)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.BaitList)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.LatitudeDec)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.LongitudeDec)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.EezSubcountryId)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.EezClosest)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.LonghurstCode)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.BetRegionId)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.SstCelsius)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.BathyMeters)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.OniNoaa)
-                        </td>*@
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Comment)
-                    </td>
-                    @*<td>
-                            @Html.DisplayFor(modelItem => item.CreationDate)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.LogIdTubsOld)
-                        </td>*@
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DayNight.DayNightId)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Gear.GearId)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Staff.CountryId)
-                    </td>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+            @Html.DisplayFor(modelItem => item.SetBaseId)
+        </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.T2LogId)
+        </td>*@
+            @*<td>
+            @Html.DisplayFor(modelItem => item.Trip.TripName)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.SetNo)
+                @*@Html.DisplayFor(modelItem => item.SetBiological.StationNo) |
+            @Html.DisplayFor(modelItem => item.SetBiological.BioSetNo)*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SetDateLocal)
+                @Html.DisplayFor(modelItem => item.SetTimeLocal)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.SetTimeLocal)
+        </td>*@
+            @*<td>
+            @Html.DisplayFor(modelItem => item.SchoolAssociationId)
+        </td>*@
+            @*<td>
+            @Html.DisplayFor(modelItem => item.Latitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Longitude)
+        </td>*@
+            @*<td>
+            @Html.DisplayFor(modelItem => item.SetEndDateLocal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SetEndTimeLocal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndLatitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndLongitude)
+        </td>*@
+            @*<td>
+            @Html.DisplayFor(modelItem => item.BaitList)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.LatitudeDec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LongitudeDec)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.EezSubcountryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EezClosest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LonghurstCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BetRegionId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SstCelsius)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BathyMeters)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OniNoaa)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationDate)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.LogIdTubsOld)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.DayNightId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gear.GearDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Staff.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
 
-                    <td>
-                        @*<a asp-action="Edit" asp-route-id="@item.SetBaseId">Edit</a> |*@
-                        <a asp-action="Details" asp-route-id="@item.SetBaseId">Details</a>
-                        @*| <a asp-action="Delete" asp-route-id="@item.SetBaseId">Delete</a>*@
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.SetBaseId">Détails</a>
+                <a asp-controller="Fish" asp-route-id="@item.SetBaseId">Espèces</a>
+
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>

@@ -1,0 +1,265 @@
+﻿@model IEnumerable<WebBiopelagos.Web.Models.Fish>
+
+@{
+    ViewData["Title"] = "Espèces";
+}
+
+<h2>@ViewData["Title"]</h2>
+<p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>
+
+
+<h3>Campagne Wallalis</h3>
+<p><a asp-area="" asp-controller="SetBases" asp-action="Index"><input type="submit" value="Retour vers les stations" /></a></p>
+
+<p>
+    <a asp-area="" asp-controller="Fish" asp-action="">
+        <input type="submit" value="Voir toutes les données" />
+    </a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.TmpPredatorId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CsiroId)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.SamplingDate)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.CatchTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HookNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReelNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DropNo)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.FishNo)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.IsOfInterest)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.OwnershipId)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.LengthMm)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LengthMm2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LengthMm3)
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.CalculatedWtGr)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WeightGr)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GonadWeightGr)
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Photo1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Photo2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Photo3)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Photo4)
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.DataReceptionDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PaiementDate)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.EnteredByOld)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Timestamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TmpId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EditorStaff)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.EditorStaffId2Navigation)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.FishType)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.LengthCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LengthCodeId2Navigation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LengthCodeId3Navigation)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.SetBase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Species)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.WeightCode)
+                </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.TmpPredatorId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CsiroId)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.SamplingDate)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.CatchTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HookNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReelNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DropNo)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.FishNo)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.IsOfInterest)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.OwnershipId)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.LengthMm)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LengthMm2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LengthMm3)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.CalculatedWtGr)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WeightGr)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GonadWeightGr)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Photo1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Photo2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Photo3)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Photo4)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.DataReceptionDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PaiementDate)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Comment)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.EnteredByOld)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreationDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Timestamp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TmpId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EditorStaff.FullName)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.EditorStaffId2Navigation.CountryId)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.FishType.FishTypeDesc)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.LengthCode.LengthCodeId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LengthCodeId2Navigation.LengthCodeId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LengthCodeId3Navigation.LengthCodeId)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.SetBase.SetBaseId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sex.SexDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Species.ScientificName)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.WeightCode.WeightCodeId)
+                    </td>*@
+                <td>
+                    @*<a asp-action="Edit" asp-route-id="@item.FishId">Edit</a> |*@
+                    <a asp-action="Details" asp-route-id="@item.FishId">Détails</a>
+                    @*|<a asp-action="Delete" asp-route-id="@item.FishId">Delete</a>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>
+<p><a asp-area="" asp-controller="SetBases" asp-action="Index"><input type="submit" value="Retour vers les stations" /></a></p>

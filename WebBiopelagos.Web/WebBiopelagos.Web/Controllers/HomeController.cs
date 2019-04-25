@@ -17,14 +17,14 @@ namespace WebBiopelagos.Web.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "About BIOPELAGOS (French)";
+            ViewData["Message"] = "À propos de BIOPELAGOS";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Contacts us";
+            ViewData["Message"] = "Nous contacter";
 
             return View();
         }
@@ -34,6 +34,10 @@ namespace WebBiopelagos.Web.Controllers
             return View();
         }
 
+        public IActionResult Geojson()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebBiopelagos.Web.Models
 {
@@ -14,6 +15,8 @@ namespace WebBiopelagos.Web.Models
 
         public int TripId { get; set; }
         public byte TripTypeId { get; set; }
+
+        [Display(Name = "N° Campagne")]
         public string TripName { get; set; }
         public string TripNo { get; set; }
         public string AlternateTripName { get; set; }

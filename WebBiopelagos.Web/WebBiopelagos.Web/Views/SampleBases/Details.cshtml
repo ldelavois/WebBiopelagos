@@ -1,0 +1,198 @@
+﻿@model WebBiopelagos.Web.Models.SampleBase
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SampleBase</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SampleNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SampleNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceUsd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PriceUsd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAvailable)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsAvailable)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsLost)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsLost)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MissingDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MissingDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDiscarded)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsDiscarded)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPendingAnalysis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsPendingAnalysis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAnalyzed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsAnalyzed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QualityStaffId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QualityStaffId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastLocationId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastLocationId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LocationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InventoryDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventoryDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LocationDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsTransfered)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsTransfered)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InventoryLocationIdOld)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventoryLocationIdOld)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TmpId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TmpId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fish)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fish.FishNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FreezerLocation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FreezerLocation.FreezerLocationDesc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InventoryLocation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventoryLocation.CountryId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InventoryStaff)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventoryStaff.CountryId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnershipLocation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OwnershipLocation.CountryId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StorageQuality)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StorageQuality.StorageQualityId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StorageQualityCondition)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StorageQualityCondition.StorageQualityId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tissue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tissue.TissueConditionId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TissueCondition)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TissueCondition.TissueConditionId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TissueNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TissueNavigation.TissuePositionId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TissuePosition)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TissuePosition.TissuePositionId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TissueType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TissueType.TissueTypeId)
+        </dd>
+    </dl>
+</div>
+<div>
+    @*<a asp-action="Edit" asp-route-id="@Model.SampleBaseId">Edit</a> |*@
+    <a asp-action="Index">Retour</a>
+</div>

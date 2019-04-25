@@ -1,0 +1,159 @@
+﻿@model WebBiopelagos.Web.Models.SampleBase
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>SampleBase</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="SampleBaseId" />
+            <div class="form-group">
+                <label asp-for="FishId" class="control-label"></label>
+                <select asp-for="FishId" class="form-control" asp-items="ViewBag.FishId"></select>
+                <span asp-validation-for="FishId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SampleNo" class="control-label"></label>
+                <input asp-for="SampleNo" class="form-control" />
+                <span asp-validation-for="SampleNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OwnershipLocationId" class="control-label"></label>
+                <select asp-for="OwnershipLocationId" class="form-control" asp-items="ViewBag.OwnershipLocationId"></select>
+                <span asp-validation-for="OwnershipLocationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PriceUsd" class="control-label"></label>
+                <input asp-for="PriceUsd" class="form-control" />
+                <span asp-validation-for="PriceUsd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsAvailable" /> @Html.DisplayNameFor(model => model.IsAvailable)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsLost" /> @Html.DisplayNameFor(model => model.IsLost)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="MissingDate" class="control-label"></label>
+                <input asp-for="MissingDate" class="form-control" />
+                <span asp-validation-for="MissingDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsDiscarded" /> @Html.DisplayNameFor(model => model.IsDiscarded)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="TissueTypeId" class="control-label"></label>
+                <select asp-for="TissueTypeId" class="form-control" asp-items="ViewBag.TissueTypeId"></select>
+                <span asp-validation-for="TissueTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TissuePositionId" class="control-label"></label>
+                <select asp-for="TissuePositionId" class="form-control" asp-items="ViewBag.TissuePositionId"></select>
+                <span asp-validation-for="TissuePositionId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TissueConditionId" class="control-label"></label>
+                <select asp-for="TissueConditionId" class="form-control" asp-items="ViewBag.TissueConditionId"></select>
+                <span asp-validation-for="TissueConditionId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StorageQualityId" class="control-label"></label>
+                <select asp-for="StorageQualityId" class="form-control" asp-items="ViewBag.StorageQualityId"></select>
+                <span asp-validation-for="StorageQualityId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QualityStaffId" class="control-label"></label>
+                <input asp-for="QualityStaffId" class="form-control" />
+                <span asp-validation-for="QualityStaffId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastLocationId" class="control-label"></label>
+                <input asp-for="LastLocationId" class="form-control" />
+                <span asp-validation-for="LastLocationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LocationDate" class="control-label"></label>
+                <input asp-for="LocationDate" class="form-control" />
+                <span asp-validation-for="LocationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InventoryLocationId" class="control-label"></label>
+                <select asp-for="InventoryLocationId" class="form-control" asp-items="ViewBag.InventoryLocationId"></select>
+                <span asp-validation-for="InventoryLocationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InventoryDate" class="control-label"></label>
+                <input asp-for="InventoryDate" class="form-control" />
+                <span asp-validation-for="InventoryDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InventoryStaffId" class="control-label"></label>
+                <select asp-for="InventoryStaffId" class="form-control" asp-items="ViewBag.InventoryStaffId"></select>
+                <span asp-validation-for="InventoryStaffId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FreezerLocationId" class="control-label"></label>
+                <select asp-for="FreezerLocationId" class="form-control" asp-items="ViewBag.FreezerLocationId"></select>
+                <span asp-validation-for="FreezerLocationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LocationDetails" class="control-label"></label>
+                <input asp-for="LocationDetails" class="form-control" />
+                <span asp-validation-for="LocationDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comment" class="control-label"></label>
+                <input asp-for="Comment" class="form-control" />
+                <span asp-validation-for="Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreationDate" class="control-label"></label>
+                <input asp-for="CreationDate" class="form-control" />
+                <span asp-validation-for="CreationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsTransfered" /> @Html.DisplayNameFor(model => model.IsTransfered)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="InventoryLocationIdOld" class="control-label"></label>
+                <input asp-for="InventoryLocationIdOld" class="form-control" />
+                <span asp-validation-for="InventoryLocationIdOld" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TmpId" class="control-label"></label>
+                <input asp-for="TmpId" class="form-control" />
+                <span asp-validation-for="TmpId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

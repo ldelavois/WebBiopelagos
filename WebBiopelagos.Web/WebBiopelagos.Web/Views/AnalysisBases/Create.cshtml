@@ -1,0 +1,83 @@
+﻿@model WebBiopelagos.Web.Models.AnalysisBase
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>AnalysisBase</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SampleBaseId" class="control-label"></label>
+                <select asp-for="SampleBaseId" class ="form-control" asp-items="ViewBag.SampleBaseId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TissueTypeId" class="control-label"></label>
+                <select asp-for="TissueTypeId" class ="form-control" asp-items="ViewBag.TissueTypeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnalysisTypeId" class="control-label"></label>
+                <select asp-for="AnalysisTypeId" class ="form-control" asp-items="ViewBag.AnalysisTypeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnalysisDate" class="control-label"></label>
+                <input asp-for="AnalysisDate" class="form-control" />
+                <span asp-validation-for="AnalysisDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaboratoryLocationId" class="control-label"></label>
+                <select asp-for="LaboratoryLocationId" class ="form-control" asp-items="ViewBag.LaboratoryLocationId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="LocationDetails" class="control-label"></label>
+                <input asp-for="LocationDetails" class="form-control" />
+                <span asp-validation-for="LocationDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnalyserStaffId" class="control-label"></label>
+                <select asp-for="AnalyserStaffId" class ="form-control" asp-items="ViewBag.AnalyserStaffId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnalyserStaffId2" class="control-label"></label>
+                <select asp-for="AnalyserStaffId2" class ="form-control" asp-items="ViewBag.AnalyserStaffId2"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnalyserStaffId3" class="control-label"></label>
+                <select asp-for="AnalyserStaffId3" class ="form-control" asp-items="ViewBag.AnalyserStaffId3"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comment" class="control-label"></label>
+                <input asp-for="Comment" class="form-control" />
+                <span asp-validation-for="Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TmpId" class="control-label"></label>
+                <input asp-for="TmpId" class="form-control" />
+                <span asp-validation-for="TmpId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnalyzedByOld" class="control-label"></label>
+                <input asp-for="AnalyzedByOld" class="form-control" />
+                <span asp-validation-for="AnalyzedByOld" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaboratoryIdOld" class="control-label"></label>
+                <input asp-for="LaboratoryIdOld" class="form-control" />
+                <span asp-validation-for="LaboratoryIdOld" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

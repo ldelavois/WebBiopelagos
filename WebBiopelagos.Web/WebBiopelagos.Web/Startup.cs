@@ -66,12 +66,13 @@ namespace WebBiopelagos.Web
             {
                 routes.MapRoute(
                     name: "default",
+                    //template: "{controller=Home}/{id?}");
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
             app.Run(async (context) => {
                 await context.Response.WriteAsync(
-                   "Hello World! This ASP.NET Core Application");
+                   "Page introuvable");
             });
 
         }
