@@ -20,6 +20,14 @@ namespace WebBiopelagos.Web.Models
             SamplePendingAnalysis = new HashSet<SamplePendingAnalysis>();
         }
 
+        [Display(Name = "ID Espèce associée")]
+        public int FishId { get; set; }
+
+        [Display(Name = "ID Echantillon")]
+        public int SampleBaseId { get; set; }
+
+
+
         [Display(Name = "Numéro")]
         public string SampleNo { get; set; }
 
@@ -27,10 +35,10 @@ namespace WebBiopelagos.Web.Models
         public bool IsAvailable { get; set; }
 
         [Display(Name = "En attente d'analyse")]
-        public bool? IsPendingAnalysis { get; set; }
+        public bool IsPendingAnalysis { get; set; }
 
         [Display(Name = "Analysé")]
-        public bool? IsAnalyzed { get; set; }
+        public bool IsAnalyzed { get; set; }
 
         [Display(Name = "Equipe qualité")]
         public short? QualityStaffId { get; set; }
@@ -39,6 +47,7 @@ namespace WebBiopelagos.Web.Models
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime? LocationDate { get; set; }
 
+        [Display(Name = "Date inventaire")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime? InventoryDate { get; set; }
 
@@ -49,6 +58,7 @@ namespace WebBiopelagos.Web.Models
         public string Comment { get; set; }
 
         [Display(Name = "Date de création")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime CreationDate { get; set; }
 
         public int? TmpId { get; set; }
@@ -79,7 +89,7 @@ namespace WebBiopelagos.Web.Models
         [Display(Name = "Condition tissue")]
         public TissueCondition TissueCondition { get; set; }
 
-        [Display(Name = "navigation tissue")]
+        [Display(Name = "Navigation tissue")]
         public PositionSampleType TissueNavigation { get; set; }
 
         [Display(Name = "Position tissue")]
@@ -88,8 +98,7 @@ namespace WebBiopelagos.Web.Models
         [Display(Name = "Type tissue")]
         public TissueType TissueType { get; set; }
 
-        public int SampleBaseId { get; set; }
-        public int FishId { get; set; }
+
         public short OwnershipLocationId { get; set; }
         public double? PriceUsd { get; set; }
         public bool IsLost { get; set; }

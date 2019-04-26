@@ -19,9 +19,9 @@ namespace WebBiopelagos.Web.Controllers
         }
 
         // GET: SampleBases
-        public async Task<IActionResult> Index(int? id)
+        public async Task<IActionResult> Index(int? SampleBaseId, int? FishId)
         {
-            if (id == null)
+            if (SampleBaseId == null && FishId == null)
             {
                 var bioDaSysContext = _context.SampleBase
                     .Where(f => f.Comment != null && f.Comment.Contains("Wallalis"))
@@ -40,11 +40,11 @@ namespace WebBiopelagos.Web.Controllers
                 return View(await bioDaSysContext.ToListAsync());
             }
 
-            else
+            else if (FishId == null)
             {
                 var bioDaSysContext = _context.SampleBase
                     .Where(f => f.Comment != null && f.Comment.Contains("Wallalis"))
-                    .Where(f => f.FishId == id)
+                    .Where(f => f.SampleBaseId == SampleBaseId)
                     .Include(s => s.Fish)
                     .Include(s => s.FreezerLocation)
                     .Include(s => s.InventoryLocation)
@@ -58,6 +58,27 @@ namespace WebBiopelagos.Web.Controllers
                     .Include(s => s.TissuePosition)
                     .Include(s => s.TissueType);
                 return View(await bioDaSysContext.ToListAsync());
+            }
+
+            else
+            {
+                var bioDaSysContext = _context.SampleBase
+                   .Where(f => f.Comment != null && f.Comment.Contains("Wallalis"))
+                   .Where(f => f.FishId == FishId)
+                   .Include(s => s.Fish)
+                   .Include(s => s.FreezerLocation)
+                   .Include(s => s.InventoryLocation)
+                   .Include(s => s.InventoryStaff)
+                   .Include(s => s.OwnershipLocation)
+                   .Include(s => s.StorageQuality)
+                   .Include(s => s.StorageQualityCondition)
+                   .Include(s => s.Tissue)
+                   .Include(s => s.TissueCondition)
+                   .Include(s => s.TissueNavigation)
+                   .Include(s => s.TissuePosition)
+                   .Include(s => s.TissueType);
+                return View(await bioDaSysContext.ToListAsync());
+
             }
 
         }

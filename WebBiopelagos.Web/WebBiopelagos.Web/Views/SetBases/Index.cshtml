@@ -8,27 +8,46 @@
 <p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>
 <h3>Campagne Wallalis</h3>
 
-<p>
-    @*<a asp-action="Create">Create New</a>*@
-</p>
 <table class="table">
     <thead>
         <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.SetBaseId)
-        </th>
-            @*<th>
-            @Html.DisplayNameFor(model => model.Trip)
-        </th>*@
-            @*<th>
-            @Html.DisplayNameFor(model => model.T2LogId)
-        </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.SetBaseId)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.SetNo)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.SetDateLocal)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LatitudeDec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LongitudeDec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DayNight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
+
+            @*<th>
+            @Html.DisplayNameFor(model => model.Trip)
+        </th>*@
+            @*<th>
+            @Html.DisplayNameFor(model => model.T2LogId)
+        </th>*@
             @*<th>
             @Html.DisplayNameFor(model => model.SetTimeLocal)
         </th>*@
@@ -56,12 +75,6 @@
         <th>
             @Html.DisplayNameFor(model => model.BaitList)
         </th>*@
-            <th>
-                @Html.DisplayNameFor(model => model.LatitudeDec)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LongitudeDec)
-            </th>
             @*<th>
             @Html.DisplayNameFor(model => model.EezSubcountryId)
         </th>
@@ -83,40 +96,19 @@
         <th>
             @Html.DisplayNameFor(model => model.OniNoaa)
         </th>*@
-
-            <th>
-                @Html.DisplayNameFor(model => model.CreationDate)
-            </th>
             @*<th>
             @Html.DisplayNameFor(model => model.LogIdTubsOld)
         </th>*@
-            <th>
-                @Html.DisplayNameFor(model => model.DayNight)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Gear)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Staff)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Comment)
-            </th>
-
+            <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
-            @Html.DisplayFor(modelItem => item.SetBaseId)
-        </td>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.T2LogId)
-        </td>*@
-            @*<td>
-            @Html.DisplayFor(modelItem => item.Trip.TripName)
-        </td>*@
+                @Html.DisplayFor(modelItem => item.SetBaseId)
+            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.SetNo)
                 @*@Html.DisplayFor(modelItem => item.SetBiological.StationNo) |
@@ -126,6 +118,33 @@
                 @Html.DisplayFor(modelItem => item.SetDateLocal)
                 @Html.DisplayFor(modelItem => item.SetTimeLocal)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LatitudeDec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LongitudeDec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DayNightId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gear.GearDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Staff.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.T2LogId)
+        </td>*@
+            @*<td>
+            @Html.DisplayFor(modelItem => item.Trip.TripName)
+        </td>*@
             @*<td>
             @Html.DisplayFor(modelItem => item.SetTimeLocal)
         </td>*@
@@ -153,12 +172,6 @@
             @*<td>
             @Html.DisplayFor(modelItem => item.BaitList)
         </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.LatitudeDec)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LongitudeDec)
-            </td>
             @*<td>
             @Html.DisplayFor(modelItem => item.EezSubcountryId)
         </td>
@@ -180,28 +193,13 @@
         <td>
             @Html.DisplayFor(modelItem => item.OniNoaa)
         </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.CreationDate)
-            </td>
             @*<td>
             @Html.DisplayFor(modelItem => item.LogIdTubsOld)
         </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.DayNightId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gear.GearDesc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Staff.FullName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Comment)
-            </td>
 
             <td>
                 <a asp-action="Details" asp-route-id="@item.SetBaseId">Détails</a>
-                <a asp-controller="Fish" asp-route-id="@item.SetBaseId">Espèces</a>
+                <a asp-controller="Fish" asp-route-setBaseId="@item.SetBaseId">Espèces</a>
 
 
             </td>

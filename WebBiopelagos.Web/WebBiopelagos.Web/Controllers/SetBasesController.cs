@@ -19,9 +19,9 @@ namespace WebBiopelagos.Web.Controllers
         }
 
         // GET: SetBases
-        public async Task<IActionResult> Index(int? id)
+        public async Task<IActionResult> Index(int? setBaseId)
         {
-            if (id == null)
+            if (setBaseId == null)
             {
                 var bioDaSysContext = _context.SetBase
                 .Where(s => s.TripId == 6440)
@@ -36,7 +36,7 @@ namespace WebBiopelagos.Web.Controllers
             else
             {
                 var bioDaSysContext = _context.SetBase
-                                .Where(s => s.SetBaseId == id)
+                                .Where(s => s.SetBaseId == setBaseId)
                                 .Where(s => s.TripId ==6440)
                                 .Include(s => s.DayNight)
                                 .Include(s => s.Gear)

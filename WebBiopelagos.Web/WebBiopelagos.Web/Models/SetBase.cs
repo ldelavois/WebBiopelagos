@@ -16,7 +16,7 @@ namespace WebBiopelagos.Web.Models
             SetBiologicalZooplankton = new HashSet<SetBiologicalZooplankton>();
         }
 
-
+        [Display(Name = "ID Station")]
         public int SetBaseId { get; set; }
 
         [Display(Name = "N° Campagne")]

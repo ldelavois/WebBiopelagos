@@ -16,30 +16,36 @@
     </a>
 </p>
 
-<p>
-    @*<a asp-action="Create">Create New</a>*@
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.Fish.FishId) associée
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fish)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SampleBaseId)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.SampleNo)
             </th>
             @*<th>
-                @Html.DisplayNameFor(model => model.PriceUsd)
-            </th>*@
+            @Html.DisplayNameFor(model => model.PriceUsd)
+        </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.IsAvailable)
             </th>
             @*<th>
-                @Html.DisplayNameFor(model => model.IsLost)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MissingDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsDiscarded)
-            </th>*@
+            @Html.DisplayNameFor(model => model.IsLost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MissingDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsDiscarded)
+        </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.IsPendingAnalysis)
             </th>
@@ -50,8 +56,8 @@
                 @Html.DisplayNameFor(model => model.QualityStaffId)
             </th>
             @*<th>
-                @Html.DisplayNameFor(model => model.LastLocationId)
-            </th>*@
+            @Html.DisplayNameFor(model => model.LastLocationId)
+        </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.LocationDate)
             </th>
@@ -62,22 +68,16 @@
                 @Html.DisplayNameFor(model => model.LocationDetails)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Comment)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.CreationDate)
             </th>
             @*<th>
-                @Html.DisplayNameFor(model => model.IsTransfered)
-            </th>*@
+            @Html.DisplayNameFor(model => model.IsTransfered)
+        </th>*@
             @*<th>
-                @Html.DisplayNameFor(model => model.InventoryLocationIdOld)
-            </th>*@
+            @Html.DisplayNameFor(model => model.InventoryLocationIdOld)
+        </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.TmpId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fish)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.FreezerLocation)
@@ -97,20 +97,23 @@
             <th>
                 @Html.DisplayNameFor(model => model.StorageQualityCondition)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.Tissue)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.TissueCondition)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.TissueNavigation)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.TissuePosition)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TissueType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
             </th>
             <th></th>
         </tr>
@@ -118,104 +121,109 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SampleNo)
-                </td>
-                @*<td>
-                    @Html.DisplayFor(modelItem => item.PriceUsd)
-                </td>*@
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsAvailable)
-                </td>
-                @*<td>
-                    @Html.DisplayFor(modelItem => item.IsLost)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MissingDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsDiscarded)
-                </td>*@
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsPendingAnalysis)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsAnalyzed)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.QualityStaffId)
-                </td>
-                @*<td>
-                    @Html.DisplayFor(modelItem => item.LastLocationId)
-                </td>*@
-                <td>
-                    @Html.DisplayFor(modelItem => item.LocationDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.InventoryDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LocationDetails)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Comment)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreationDate)
-                </td>
-                @*<td>
-                    @Html.DisplayFor(modelItem => item.IsTransfered)
-                </td>*@
-                @*<td>
-                    @Html.DisplayFor(modelItem => item.InventoryLocationIdOld)
-                </td>*@
-                <td>
-                    @Html.DisplayFor(modelItem => item.TmpId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Fish.FishNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FreezerLocation.FreezerLocationDesc)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.InventoryLocation.CountryId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.InventoryStaff.CountryId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.OwnershipLocation.CountryId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StorageQuality.StorageQualityId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StorageQualityCondition.StorageQualityId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Tissue.TissueConditionId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TissueCondition.TissueConditionId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TissueNavigation.TissuePositionId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TissuePosition.TissuePositionId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TissueType.TissueTypeId)
-                </td>
-                <td>
+        <tr>
+            <td>
+                <a asp-controller="Fish" asp-action="Index" asp-route-FishId="@item.Fish.FishId">@Html.DisplayFor(modelItem => item.Fish.FishId)</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fish.FishNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SampleBaseId)
+            </td>
 
-                    <a asp-action="Details" asp-route-id="@item.SampleBaseId">Details</a>
-                    @*<a asp-action="Edit" asp-route-id="@item.SampleBaseId">Edit</a>
-                        <a asp-action="Delete" asp-route-id="@item.SampleBaseId">Delete</a>*@
-                </td>
-            </tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SampleNo)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.PriceUsd)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.IsAvailable)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.IsLost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MissingDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsDiscarded)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPendingAnalysis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsAnalyzed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InventoryStaff.FullName)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.LastLocationId)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InventoryDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationDate)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.IsTransfered)
+        </td>*@
+            @*<td>
+            @Html.DisplayFor(modelItem => item.InventoryLocationIdOld)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.TmpId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FreezerLocation.FreezerLocationDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InventoryLocation.LocationName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InventoryStaff.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnershipLocation.LocationName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StorageQuality.StorageQualityDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StorageQualityCondition.StorageConditionId)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Tissue.TissueConditionId)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.TissueCondition.TissueConditionDesc)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.TissueNavigation.TissuePositionId)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.TissuePosition.TissuePositionDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TissueType.TissueTypeDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+            <td>
+
+                <a asp-action="Details" asp-route-id="@item.SampleBaseId">Détails</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>

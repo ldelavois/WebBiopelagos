@@ -52,7 +52,7 @@ namespace WebBiopelagos.Web.Models
         [Display(Name = "Type d'éspèces")]
         public FishType FishType { get; set; }
 
-        [Display(Name = "Set base id")]
+        [Display(Name = "ID Station associée")]
         public SetBase SetBase { get; set; }
 
         [Display(Name = "Sexe")]
@@ -66,7 +66,7 @@ namespace WebBiopelagos.Web.Models
 
 
 
-
+        [Display(Name = "ID Espèce")]
         public int FishId { get; set; } //pas affiché
         public int? TmpPredatorId { get; set; } //pas affiché
         public string CsiroId { get; set; } //pas affiché

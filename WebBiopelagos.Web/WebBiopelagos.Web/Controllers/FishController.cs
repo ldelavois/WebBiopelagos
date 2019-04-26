@@ -19,10 +19,10 @@ namespace WebBiopelagos.Web.Controllers
         }
 
         // GET: Fish
-        public async Task<IActionResult> Index(int? id)
+        public async Task<IActionResult> Index(int? setBaseId, int? FishId)
 
         {
-            if (id == null)
+            if (FishId == null && setBaseId == null)
             {
 
                 var bioDaSysContext = _context.Fish
@@ -41,10 +41,28 @@ namespace WebBiopelagos.Web.Controllers
                 return View(await bioDaSysContext.ToListAsync());
             }
 
-            else
+            else if (setBaseId == null)
             {
                 var bioDaSysContext = _context.Fish
-                    .Where(f => f.SetBaseId == id)
+                    .Where(f => f.FishId == FishId)
+                                        .Include(f => f.EditorStaff)
+      .Include(f => f.EditorStaffId2Navigation)
+      .Include(f => f.FishType)
+      .Include(f => f.LengthCode)
+      .Include(f => f.LengthCodeId2Navigation)
+      .Include(f => f.LengthCodeId3Navigation)
+      .Include(f => f.SetBase)
+      .Include(f => f.Sex)
+      .Include(f => f.Species)
+      .Include(f => f.WeightCode);
+
+                return View(await bioDaSysContext.ToListAsync());
+
+            }
+
+            else {
+                var bioDaSysContext = _context.Fish
+                    .Where(f => f.SetBaseId == setBaseId)
                                         .Include(f => f.EditorStaff)
       .Include(f => f.EditorStaffId2Navigation)
       .Include(f => f.FishType)
@@ -62,9 +80,9 @@ namespace WebBiopelagos.Web.Controllers
         }
 
             // GET: Fish/Details/5
-            public async Task<IActionResult> Details(int? id)
+            public async Task<IActionResult> Details(int? FishId)
             {
-                if (id == null)
+                if (FishId == null)
                 {
                     return NotFound();
                 }
@@ -80,7 +98,7 @@ namespace WebBiopelagos.Web.Controllers
                     .Include(f => f.Sex)
                     .Include(f => f.Species)
                     .Include(f => f.WeightCode)
-                    .FirstOrDefaultAsync(m => m.FishId == id);
+                    .FirstOrDefaultAsync(m => m.FishId == FishId);
                 if (fish == null)
                 {
                     return NotFound();
