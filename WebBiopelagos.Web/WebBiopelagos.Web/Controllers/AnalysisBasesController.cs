@@ -21,7 +21,16 @@ namespace WebBiopelagos.Web.Controllers
         // GET: AnalysisBases
         public async Task<IActionResult> Index()
         {
-            var bioDaSysContext = _context.AnalysisBase.Include(a => a.AnalyserStaff).Include(a => a.AnalyserStaffId2Navigation).Include(a => a.AnalyserStaffId3Navigation).Include(a => a.AnalysisSampleType).Include(a => a.AnalysisType).Include(a => a.LaboratoryLocation).Include(a => a.SampleBase);
+            var bioDaSysContext = _context.AnalysisBase
+                .Where(f => f.Comment != null && f.Comment.Contains("Wallalis"))
+                .Include(a => a.AnalyserStaff)
+                .Include(a => a.AnalyserStaffId2Navigation)
+                .Include(a => a.AnalyserStaffId3Navigation)
+                .Include(a => a.AnalysisSampleType)
+                .Include(a => a.AnalysisType)
+                .Include(a => a.LaboratoryLocation)
+                .Include(a => a.SampleBase)
+                .Include(a => a.TissueType);
             return View(await bioDaSysContext.ToListAsync());
         }
 
@@ -41,6 +50,7 @@ namespace WebBiopelagos.Web.Controllers
                 .Include(a => a.AnalysisType)
                 .Include(a => a.LaboratoryLocation)
                 .Include(a => a.SampleBase)
+                .Include(a => a.TissueType)
                 .FirstOrDefaultAsync(m => m.AnalysisBaseId == id);
             if (analysisBase == null)
             {

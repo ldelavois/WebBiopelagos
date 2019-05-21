@@ -76,9 +76,6 @@
           "jQuery": "1.4.4"
         }
       },
-      "leaflet/0.7.3": {
-        "type": "package"
-      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -5209,25 +5206,6 @@
         "Content/Scripts/jquery.validate.min.js",
         "jquery.validation.1.17.0.nupkg.sha512",
         "jquery.validation.nuspec"
-      ]
-    },
-    "leaflet/0.7.3": {
-      "sha512": "R20Vv1lXuqcu6lKeHFy8KnahLxetHaKBS0S2y/mrq+phhkTtz0zIr6isxJR89LuQR9v53aKNMFVyaxLU+zagEw==",
-      "type": "package",
-      "path": "leaflet/0.7.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "content/Content/images/layers-2x.png",
-        "content/Content/images/layers.png",
-        "content/Content/images/marker-icon-2x.png",
-        "content/Content/images/marker-icon.png",
-        "content/Content/images/marker-shadow.png",
-        "content/Content/leaflet.css",
-        "content/Scripts/leaflet-0.7.3.js",
-        "content/Scripts/leaflet-0.7.3.min.js",
-        "leaflet.0.7.3.nupkg.sha512",
-        "leaflet.nuspec"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -13551,8 +13529,7 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.7",
       "jQuery >= 3.3.1",
       "jQuery.Validation >= 1.17.0",
-      "jquery.mobile >= 1.4.5",
-      "leaflet >= 0.7.3"
+      "jquery.mobile >= 1.4.5"
     ]
   },
   "packageFolders": {
@@ -13666,10 +13643,6 @@
           "jquery.mobile": {
             "target": "Package",
             "version": "[1.4.5, )"
-          },
-          "leaflet": {
-            "target": "Package",
-            "version": "[0.7.3, )"
           }
         },
         "imports": [

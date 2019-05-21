@@ -1,0 +1,60 @@
+﻿@model WebBiopelagos.Web.Models.SetBiologicalZooplankton
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SetBiologicalZooplankton</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DepthMinM)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DepthMinM)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DepthMaxM)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DepthMaxM)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DepthNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DepthNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VolumeFilteredM3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VolumeFilteredM3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TmpId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TmpId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SetBase)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SetBase.GearId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SetZooplanktonId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

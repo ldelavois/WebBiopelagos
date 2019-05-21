@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebBiopelagos.Web.Models;
 
@@ -28,7 +25,9 @@ namespace WebBiopelagos.Web.Controllers
                 .Include(s => s.DayNight)
                 .Include(s => s.Gear)
                 .Include(s => s.Staff)
-                .Include(s => s.Trip);
+                .Include(s => s.Trip)
+                .Include(s => s.SetBiologicalZooplankton)
+                .Include(s => s.SetBiological);
 
                 return View(await bioDaSysContext.ToListAsync());
             }
@@ -37,11 +36,13 @@ namespace WebBiopelagos.Web.Controllers
             {
                 var bioDaSysContext = _context.SetBase
                                 .Where(s => s.SetBaseId == setBaseId)
-                                .Where(s => s.TripId ==6440)
+                                .Where(s => s.TripId == 6440)
                                 .Include(s => s.DayNight)
                                 .Include(s => s.Gear)
                                 .Include(s => s.Staff)
-                                .Include(s => s.Trip);
+                                .Include(s => s.Trip)
+                                .Include(s => s.SetBiologicalZooplankton)
+                                .Include(s => s.SetBiological);
 
                 return View(await bioDaSysContext.ToListAsync());
 
@@ -64,6 +65,8 @@ namespace WebBiopelagos.Web.Controllers
                 .Include(s => s.Gear)
                 .Include(s => s.Staff)
                 .Include(s => s.Trip)
+                .Include(s => s.SetBiological)
+                .Include(s => s.SetBiologicalZooplankton)
                 .FirstOrDefaultAsync(m => m.SetBaseId == id);
             if (setBase == null)
             {

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<WebBiopelagos.Web.Models.SetBase>
 
 @{
-    ViewData["Title"] = "Stations";
+    ViewData["Title"] = "Opérations";
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -12,13 +12,13 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.SetDateLocal)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.SetBaseId)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.SetNo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SetDateLocal)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.LatitudeDec)
@@ -26,9 +26,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.LongitudeDec)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreationDate)
-            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.DayNight)
             </th>
@@ -36,11 +36,14 @@
                 @Html.DisplayNameFor(model => model.Gear)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Staff)
+                Profondeur
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Comment)
-            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.Staff)
+        </th>*@
+            @*<th>
+            @Html.DisplayNameFor(model => model.Comment)
+        </th>*@
 
             @*<th>
             @Html.DisplayNameFor(model => model.Trip)
@@ -106,39 +109,57 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.SetDateLocal)
+                @Html.DisplayFor(modelItem => item.SetTimeLocal)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.SetBaseId)
             </td>
 
             <td>
-                @Html.DisplayFor(modelItem => item.SetNo)
-                @*@Html.DisplayFor(modelItem => item.SetBiological.StationNo) |
-            @Html.DisplayFor(modelItem => item.SetBiological.BioSetNo)*@
+                @if (item.GearId == "K")
+                {
+                    @Html.DisplayFor(modelItem => item.SetBiological.BioSetNo)
+                    @:&nbsp;
+                    @Html.DisplayFor(modelItem => item.SetBiological.StationNo)
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.SetNo)
+                }
+
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SetDateLocal)
-                @Html.DisplayFor(modelItem => item.SetTimeLocal)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.LatitudeDec)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.LongitudeDec)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreationDate)
-            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.CreationDate)
+        </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.DayNightId)
+                @Html.DisplayFor(modelItem => item.SetBiological.DayNightId)
+
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Gear.GearDesc)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Staff.FullName)
+                @*@if (item.SetBiologicalZooplankton.DepthNo == 1)
+                {
+                @Html.DisplayFor(modelItem => item.SetBiologicalZooplankton.DepthMaxM)
+                        }*@
+
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Comment)
-            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.Staff.FullName)
+        </td>*@
+            @*<td>
+            @Html.DisplayFor(modelItem => item.Comment)
+        </td>*@
             @*<td>
             @Html.DisplayFor(modelItem => item.T2LogId)
         </td>*@
@@ -198,7 +219,7 @@
         </td>*@
 
             <td>
-                <a asp-action="Details" asp-route-id="@item.SetBaseId">Détails</a>
+                | <a asp-action="Details" asp-route-id="@item.SetBaseId">Détails</a> |
                 <a asp-controller="Fish" asp-route-setBaseId="@item.SetBaseId">Espèces</a>
 
 

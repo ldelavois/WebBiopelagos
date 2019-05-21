@@ -1,0 +1,61 @@
+﻿@model WebBiopelagos.Web.Models.SetBiologicalZooplankton
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>SetBiologicalZooplankton</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="SetZooplanktonId" />
+            <div class="form-group">
+                <label asp-for="SetBaseId" class="control-label"></label>
+                <select asp-for="SetBaseId" class="form-control" asp-items="ViewBag.SetBaseId"></select>
+                <span asp-validation-for="SetBaseId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepthMinM" class="control-label"></label>
+                <input asp-for="DepthMinM" class="form-control" />
+                <span asp-validation-for="DepthMinM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepthMaxM" class="control-label"></label>
+                <input asp-for="DepthMaxM" class="form-control" />
+                <span asp-validation-for="DepthMaxM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepthNo" class="control-label"></label>
+                <input asp-for="DepthNo" class="form-control" />
+                <span asp-validation-for="DepthNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VolumeFilteredM3" class="control-label"></label>
+                <input asp-for="VolumeFilteredM3" class="form-control" />
+                <span asp-validation-for="VolumeFilteredM3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comment" class="control-label"></label>
+                <input asp-for="Comment" class="form-control" />
+                <span asp-validation-for="Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TmpId" class="control-label"></label>
+                <input asp-for="TmpId" class="form-control" />
+                <span asp-validation-for="TmpId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

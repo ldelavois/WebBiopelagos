@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "127b8f7ef878e8fb710b94b2053a5428906fecf9"
+    "signature": "b2bd62ae9d2b0321b917d026a8fdd66e31e12803"
   },
   "compilationOptions": {
     "defines": [
@@ -39,8 +39,7 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.7",
           "jQuery": "3.3.1",
           "jQuery.Validation": "1.17.0",
-          "jquery.mobile": "1.4.5",
-          "leaflet": "0.7.3"
+          "jquery.mobile": "1.4.5"
         },
         "runtime": {
           "WebBiopelagos.Web.dll": {}
@@ -125,7 +124,6 @@
           "jQuery": "3.3.1"
         }
       },
-      "leaflet/0.7.3": {},
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
         "dependencies": {
@@ -3872,13 +3870,6 @@
       "sha512": "sha512-pzCKw7J9XugWLBCQCPa2qBVS57vbe3OkuEGgbMGWf+66Tyjanyy6qwC9/6Z+tt2PMtkQqNt+BexNDVkTnE8egw==",
       "path": "jquery.validation/1.17.0",
       "hashPath": "jquery.validation.1.17.0.nupkg.sha512"
-    },
-    "leaflet/0.7.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-R20Vv1lXuqcu6lKeHFy8KnahLxetHaKBS0S2y/mrq+phhkTtz0zIr6isxJR89LuQR9v53aKNMFVyaxLU+zagEw==",
-      "path": "leaflet/0.7.3",
-      "hashPath": "leaflet.0.7.3.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",

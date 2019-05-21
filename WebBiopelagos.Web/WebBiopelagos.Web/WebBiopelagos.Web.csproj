@@ -15,13 +15,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\js\wallalis.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Couchbase.Extensions.DependencyInjection" Version="1.0.2" />
     <PackageReference Include="Couchbase.Extensions.Encryption" Version="1.0.0" />
     <PackageReference Include="CouchbaseNetClient" Version="2.7.5" />
     <PackageReference Include="jQuery" Version="3.3.1" />
     <PackageReference Include="jquery.mobile" Version="1.4.5" />
     <PackageReference Include="jQuery.Validation" Version="1.17.0" />
-    <PackageReference Include="leaflet" Version="0.7.3" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.8" />
@@ -35,5 +38,13 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.7" PrivateAssets="All" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\js\wallalis.geojson">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties wwwroot_4js_4wallalis_1json__JSONSchema="http://json.schemastore.org/band-manifest" /></VisualStudio></ProjectExtensions>
 
 </Project>

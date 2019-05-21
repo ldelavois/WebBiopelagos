@@ -1,0 +1,51 @@
+﻿@model WebBiopelagos.Web.Models.AnalysisQuantity
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>AnalysisQuantity</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QunatityValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QunatityValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantityUnit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QuantityUnit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SubAnalysisType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SubAnalysisType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Analysis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Analysis.AnalysisTypeId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="AnalysisBaseId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

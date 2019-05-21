@@ -36,7 +36,7 @@ namespace WebBiopelagos.Web.Controllers
       .Include(f => f.SetBase)
       .Include(f => f.Sex)
       .Include(f => f.Species)
-      .Include(f => f.WeightCode);
+      .Include(f => f.WeightCode) ;
 
                 return View(await bioDaSysContext.ToListAsync());
             }

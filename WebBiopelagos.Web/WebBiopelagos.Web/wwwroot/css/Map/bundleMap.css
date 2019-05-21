@@ -1,6 +1,6 @@
-html, body, #map {
+html, body, #map{
 	width:100%;
-	height:100%;
+	height:100px;
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
@@ -91,28 +91,28 @@ div#size, a#delete {
 
 
 #theMap, #progressBar {
-    position: relative;    
-    /*width: 1000px;*/ 	
+    position: relative;
+    /*width: 1000px;*/
 	padding-top: 32%;
 	min-height:300px;
 	min-width:400px;
-    height: 650px;	
+    height: 650px;
     /*margin-left: auto ;
-    margin-right: auto ;*/  
-    background: white url(../../images/navigation/loading.gif) no-repeat 50% 50%;	
+    margin-right: auto ;*/
+    background: white url(../../images/navigation/loading.gif) no-repeat 50% 50%;
 }
 
-.overlay { 
-	position:absolute; 
+.overlay {
+	position:absolute;
 	margin-top: 31%;
 	margin-right: 15%;
 	max-width:200px;
-	padding: 20px 50px; 
-	font: 14px/16px Arial, Helvetica, sans-serif; 
-	color: #223; 
-	background-color:rgba(255,255,255,0.8); 
-	box-shadow: 0 0 15px rgba(0,0,0,0.2); 
-	border-radius: 5px; } 
+	padding: 20px 50px;
+	font: 14px/16px Arial, Helvetica, sans-serif;
+	color: #223;
+	background-color:rgba(255,255,255,0.8);
+	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	border-radius: 5px; }
 
 .title { top:10px; right:10px; }
 
@@ -141,13 +141,13 @@ div#size, a#delete {
 #MyForm
 {
 	display: table;
-    margin: 0 auto;	
+    margin: 0 auto;
 }
 
 .navbar-inner {
-  background-color: #1089C5; 
+  background-color: #1089C5;
 
- 
+
   background-image: -moz-linear-gradient(top, #1089C5, #0D5999);
   background-image: -ms-linear-gradient(top, #1089C5, #0D5999);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1089C5), to(#0D5999));
@@ -156,7 +156,7 @@ div#size, a#delete {
   background-image: linear-gradient(top, #1089C5, #0D5999);
   background-repeat: repeat-x;
   border-color: #F5F5F5;
-  
+
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1089C5', endColorstr='#0D5999', GradientType=0);
 }
 
@@ -168,7 +168,7 @@ div#size, a#delete {
 	text-align:center;
 }
 
-.navbar .brand 
+.navbar .brand
 {
 	font-weight:normal;
 }
@@ -180,7 +180,7 @@ div#size, a#delete {
 .control-label
 {
 	font-weight:bold;
-	color:#0D5999;	
+	color:#0D5999;
 }
 
 u
@@ -195,7 +195,7 @@ hr
 }
 
 .leaflet-control-layers input[type=checkbox],input[type=radio] {
-    float: left;	
+    float: left;
     margin-right: 0.4em;
 }
 
@@ -209,7 +209,7 @@ hr
 	border-radius: 50%;
     /*behavior: url(PIE.htc);*/ /* remove if you don't care about IE8 */
     width: 20px;
-    height: 20px; 	
+    height: 20px;
 	display: inline-block;
 	vertical-align:middle;
 	margin-right:15px;
@@ -220,7 +220,7 @@ hr
 	border-radius: 50%;
     /*behavior: url(PIE.htc);*/ /* remove if you don't care about IE8 */
     width: 23px;
-    height: 23px; 
+    height: 23px;
 	background-color: #81D067;
 	display: inline-block;
 	vertical-align:middle;
@@ -231,7 +231,7 @@ hr
 	border-radius: 50%;
     /*behavior: url(PIE.htc);*/ /* remove if you don't care about IE8 */
     width: 23px;
-    height: 23px; 
+    height: 23px;
 	background-color: #C0B7D8;
 	display: inline-block;
 	vertical-align:middle;
@@ -242,7 +242,7 @@ hr
 	border-radius: 50%;
     /*behavior: url(PIE.htc);*/ /* remove if you don't care about IE8 */
     width: 23px;
-    height: 23px; 
+    height: 23px;
 	background-color: #EEC84D;
 	display: inline-block;
 	vertical-align:middle;
@@ -253,7 +253,7 @@ hr
 	border-radius: 50%;
     /*behavior: url(PIE.htc);*/ /* remove if you don't care about IE8 */
     width: 23px;
-    height: 23px; 
+    height: 23px;
 	background-color: #FD9C73;
 	display: inline-block;
 	vertical-align:middle;
@@ -264,7 +264,7 @@ hr
 	border-radius: 50%;
     /*behavior: url(PIE.htc);*/ /* remove if you don't care about IE8 */
     width: 23px;
-    height: 23px; 
+    height: 23px;
 	background-color: #FF5A5A;
 	display: inline-block;
 	vertical-align:middle;

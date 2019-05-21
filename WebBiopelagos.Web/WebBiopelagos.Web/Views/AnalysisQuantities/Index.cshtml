@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WebBiopelagos.Web.Models.AnalysisQuantity>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.QunatityValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantityUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubAnalysisType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Analysis)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.QunatityValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantityUnit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubAnalysisType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Analysis.AnalysisTypeId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AnalysisBaseId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AnalysisBaseId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AnalysisBaseId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Mvc;
 
 namespace WebBiopelagos.Web.Models
 {
@@ -16,7 +15,7 @@ namespace WebBiopelagos.Web.Models
             SetBiologicalZooplankton = new HashSet<SetBiologicalZooplankton>();
         }
 
-        [Display(Name = "ID Station")]
+        [Display(Name = "ID Operation")]
         public int SetBaseId { get; set; }
 
         [Display(Name = "N° Campagne")]
@@ -24,14 +23,12 @@ namespace WebBiopelagos.Web.Models
 
         public Guid? T2LogId { get; set; }
 
-        [Display(Name = "N° Station")]
+        [Display(Name = "N° Opération")]
         public int SetNo { get; set; }
 
         [Display(Name = "Date")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime SetDateLocal { get; set; }
-
-
 
 
         [Display(Name = "Heure")]

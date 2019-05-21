@@ -1,66 +1,53 @@
 ﻿@{
     ViewData["Title"] = "Contact";
 }
-<!DOCTYPE html>
-<html>
-<head>
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/lib/leaflet/leaflet.css" asp-append-version="true" />
+<script src="~/lib/leaflet/leaflet.js" asp-append-version="true"></script>
+<script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+
+
+<h2>@ViewData["Title"]</h2>
+<p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>
+
+<h3>@ViewData["Message"]</h3>
+
+<address>
+    <br>Siège de la Communauté du Pacifique<br />
+</address>
+
+<address>
+    95 promenade Roger Laroque<br />
+    BP D5<br />
+    98848 Nouméa<br />
+    Nouvelle-Calédonie<br />
+</address>
+
+<address>
+    <abbr title="Numéro de téléphone">Tél.:</abbr>+687 26 20 00
+</address>
+
+<address>
+    <strong>Email:</strong> <a href="mailto:spc@spc.int">spc@spc.int</a><br />
+</address>
+
+<div id="map">
+</div>
+<script>
+
+    var map = L.map('map').setView([-22.3023000, 166.442700], 15); //latitude,longitude,zoom
+
+    var markerSPC = L.marker([-22.3023000, 166.442700]).addTo(map);
+    markerSPC.bindPopup("<b>Siège de la Communauté du Pacifique</b><br>95 Promenade Roger Laroque<br>BP D5<br>98848 Noumea<br>Nouvelle-Calédonie").openPopup();
+
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributeurs',
+        maxZoom: 19,
+        minZoom: 11
+    }).addTo(map);
+
+</script>
 
 
 
-    <link rel="stylesheet" href="~/lib/leaflet/leaflet.css" />
-
-    <script src="~/lib/leaflet/leaflet.js"></script>
-
-    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
-
-</head>
-
-<body>
-    <h2>@ViewData["Title"]</h2>
-    <p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>
-
-    <h3>@ViewData["Message"]</h3>
-
-    <address>
-        <br>Siège de la Communauté du Pacifique<br />
-    </address>
-
-    <address>
-        95 promenade Roger Laroque<br />
-        BP D5<br />
-        98848 Nouméa<br />
-        Nouvelle-Calédonie<br />
-    </address>
-
-    <address>
-        <abbr title="Numéro de téléphone">Tél.:</abbr>+687 26 20 00
-    </address>
-
-    <address>
-        <strong>Email:</strong> <a href="mailto:spc@spc.int">spc@spc.int</a><br />
-    </address>
-
-    <div id="map">
-    </div>
-    <script>
-
-        var map = L.map('map')
-            .setView([-22.3023000, 166.442700], 16); //latitude,longitude,zoom
-
-        var markerSPC = L.marker([-22.3023000, 166.442700]).addTo(map);
-        markerSPC.bindPopup("<b>Siège de la Communauté du Pacifique</b><br>95 Promenade Roger Laroque<br>BP D5<br>98848 Noumea<br>Nouvelle-Calédonie").openPopup();
-
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributeurs',
-            maxZoom: 19,
-            minZoom: 11
-        }).addTo(map);
-
-
-
-
-    </script>
-
-</body>
-
-</html>
