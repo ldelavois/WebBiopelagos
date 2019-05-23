@@ -1,59 +1,60 @@
 ﻿@model IEnumerable<WebBiopelagos.Web.Models.AnalysisQuantity>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Quantité";
 }
 
-<h2>Index</h2>
+    <h2>@ViewData["Title"]</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>
+
+
+<h3>Campagne Wallalis</h3>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.QunatityValue)
+                @Html.DisplayNameFor(model => model.AnalysisBaseId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantityValue)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.QuantityUnit)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Comment)
+                @Html.DisplayNameFor(model => model.AnalysisTypeId)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.SubAnalysisType)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Analysis)
-            </th>
+
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.QunatityValue)
+                <a asp-controller="AnalysisBases" asp-action="Index" asp-route-AnalysisId="@item.AnalysisBaseId">@Html.DisplayFor(modelItem => item.AnalysisBaseId)</a>
+</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantityValue)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.QuantityUnit)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Comment)
+                @Html.DisplayFor(modelItem => item.AnalysisType.AnalysisTypeDesc)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SubAnalysisType)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Analysis.AnalysisTypeId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.AnalysisBaseId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.AnalysisBaseId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.AnalysisBaseId">Delete</a>
+                <a asp-action="Details" asp-route-QuantityId="@item.AnalysisBaseId">Détails</a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>

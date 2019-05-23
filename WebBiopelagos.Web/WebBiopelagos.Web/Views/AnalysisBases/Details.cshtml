@@ -1,102 +1,71 @@
 ﻿@model WebBiopelagos.Web.Models.AnalysisBase
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Détails";
 }
 
-<h2>Details</h2>
+<h2>@ViewData["Title"] - Analyses</h2>
+<p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>
+<p><a asp-area="" asp-action="Index"><input type="submit" value="Retour vers les analyses" /></a></p>
+<h3>Campagne Wallalis</h3>
 
 <div>
-    <h4>AnalysisBase</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AnalysisBaseId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnalysisBaseId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SampleBaseId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SampleBaseId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TissueTypeId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TissueType.TissueTypeDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnalysisTypeId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnalysisType.AnalysisTypeDesc)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.AnalysisDate)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.AnalysisDate)
         </dd>
-        @*<dt>
-            @Html.DisplayNameFor(model => model.LocationDetails)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.LocationDetails)
-        </dd>*@
-        @*<dt>
-            @Html.DisplayNameFor(model => model.Comment)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Comment)
-        </dd>*@
         <dt>
             @Html.DisplayNameFor(model => model.CreationDate)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.CreationDate)
         </dd>
-        @*<dt>
-            @Html.DisplayNameFor(model => model.TmpId)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.TmpId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.AnalyzedByOld)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.AnalyzedByOld)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.LaboratoryIdOld)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.LaboratoryIdOld)
-        </dd>*@
         <dt>
             @Html.DisplayNameFor(model => model.AnalyserStaff)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.AnalyserStaff.CountryId)
-        </dd>
-        @*<dt>
-            @Html.DisplayNameFor(model => model.AnalyserStaffId2Navigation)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.AnalyserStaffId2Navigation.CountryId)
-        </dd>*@
-        @*<dt>
-            @Html.DisplayNameFor(model => model.AnalyserStaffId3Navigation)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.AnalyserStaffId3Navigation.CountryId)
-        </dd>*@
-        <dt>
-            @Html.DisplayNameFor(model => model.AnalysisSampleType)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.AnalysisSampleType.AnalysisTypeId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.AnalysisType)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.AnalysisType.AnalysisTypeId)
+            @Html.DisplayFor(model => model.AnalyserStaff.FullName)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.LaboratoryLocation)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.LaboratoryLocation.CountryId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.SampleBase)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.SampleBase.SampleNo)
+            @Html.DisplayFor(model => model.LaboratoryLocation.LocationName)
         </dd>
     </dl>
 </div>
 <div>
-    @*<a asp-action="Edit" asp-route-id="@Model.AnalysisBaseId">Edit</a> |*@
     <a asp-action="Index">Retour</a>
 </div>

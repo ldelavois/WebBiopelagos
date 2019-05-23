@@ -68,10 +68,7 @@ C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos\WebBiopelagos.Web\Web
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\WebBiopelagos.Web.csproj.CopyComplete
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\Wallalis\Index.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
-C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\SetBases\Create.g.cshtml.cs
-C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\SetBases\Delete.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\SetBases\Details.g.cshtml.cs
-C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\SetBases\Edit.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\SetBases\Index.g.cshtml.cs
 C:\Users\ludovicd\source\repos\Web-Biopelagos\WebBiopelagos.Web\WebBiopelagos.Web\bin\Debug\netcoreapp2.1\WebBiopelagos.Web.deps.json
 C:\Users\ludovicd\source\repos\Web-Biopelagos\WebBiopelagos.Web\WebBiopelagos.Web\bin\Debug\netcoreapp2.1\WebBiopelagos.Web.runtimeconfig.json
@@ -118,10 +115,7 @@ C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\SampleBases\Details.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\SampleBases\Edit.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\SampleBases\Index.g.cshtml.cs
-C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\Fish\Create.g.cshtml.cs
-C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\Fish\Delete.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\Fish\Details.g.cshtml.cs
-C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\Fish\Edit.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\Fish\Index.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\bin\Debug\netcoreapp2.1\wwwroot\js\wallalis.geojson
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\WebBiopelagos.Web.csprojAssemblyReference.cache
@@ -130,13 +124,7 @@ C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\SetBiologicalZooplanktons\Details.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\SetBiologicalZooplanktons\Edit.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\SetBiologicalZooplanktons\Index.g.cshtml.cs
-C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\AnalysisBases\Create.g.cshtml.cs
-C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\AnalysisBases\Delete.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\AnalysisBases\Details.g.cshtml.cs
-C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\AnalysisBases\Edit.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\AnalysisBases\Index.g.cshtml.cs
-C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\AnalysisQuantities\Create.g.cshtml.cs
-C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\AnalysisQuantities\Delete.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\AnalysisQuantities\Details.g.cshtml.cs
-C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\AnalysisQuantities\Edit.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\AnalysisQuantities\Index.g.cshtml.cs

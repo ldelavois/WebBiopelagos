@@ -5,16 +5,24 @@
 }
 
 <h2>Analyses</h2>
+<p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>
+
+
+<h3>Campagne Wallalis</h3>
 
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.AnalysisBaseId)
+                @Html.DisplayNameFor(model => model.CreationDate)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.SampleBaseId)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnalysisBaseId)
+            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.TissueTypeId)
             </th>
@@ -24,36 +32,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.AnalysisDate)
             </th>
-            @*<th>
-            @Html.DisplayNameFor(model => model.LocationDetails)
-        </th>*@
-            @*<th>
-            @Html.DisplayNameFor(model => model.Comment)
-        </th>*@
-            <th>
-                @Html.DisplayNameFor(model => model.CreationDate)
-            </th>
-            @*<th>
-            @Html.DisplayNameFor(model => model.TmpId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AnalyzedByOld)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LaboratoryIdOld)
-        </th>*@
+
             <th>
                 @Html.DisplayNameFor(model => model.AnalyserStaff)
             </th>
-            @*<th>
-            @Html.DisplayNameFor(model => model.AnalyserStaffId2Navigation)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AnalyserStaffId3Navigation)
-        </th>*@
-            @*<th>
-                @Html.DisplayNameFor(model => model.AnalysisSampleType)
-            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.LaboratoryLocation)
             </th>
@@ -61,14 +43,19 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.AnalysisBaseId)
+                @Html.DisplayFor(modelItem => item.CreationDate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SampleBaseId)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnalysisBaseId)
+            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.TissueType.TissueTypeDesc)
             </td>
@@ -78,43 +65,21 @@
             <td>
                 @Html.DisplayFor(modelItem => item.AnalysisDate)
             </td>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.LocationDetails)
-        </td>*@
-            @*<td>
-            @Html.DisplayFor(modelItem => item.Comment)
-        </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.CreationDate)
-            </td>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.TmpId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AnalyzedByOld)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LaboratoryIdOld)
-        </td>*@
+
             <td>
                 @Html.DisplayFor(modelItem => item.AnalyserStaff.FullName)
             </td>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.AnalyserStaffId2Navigation.CountryId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AnalyserStaffId3Navigation.CountryId)
-        </td>*@
-            @*<td>
-                @Html.DisplayFor(modelItem => item.AnalysisType.AnalysisTypeId)
-            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.LaboratoryLocation.LocationName)
             </td>
             <td>
-                <a asp-action="Details" asp-route-id="@item.AnalysisBaseId">Détails</a>
+                <a asp-action="Details" asp-route-id="@item.AnalysisBaseId">Détails</a> |
+                <a asp-controller="AnalysisQuantities" asp-route-AnalysisId="@item.AnalysisBaseId">Quantité</a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>
+
+<p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>
+<p><a asp-area="" asp-controller="Fish" asp-action="Index"><input type="submit" value="Retour vers les espèces" /></a></p>

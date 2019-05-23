@@ -8,6 +8,12 @@
 <p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>
 <h3>Campagne Wallalis</h3>
 
+<p>
+    <a asp-area="" asp-controller="SetBases" asp-action="">
+        <input type="submit" value="Voir toutes les données" />
+    </a>
+</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -21,14 +27,14 @@
                 @Html.DisplayNameFor(model => model.SetNo)
             </th>
             <th>
+                N° Station
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.LatitudeDec)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.LongitudeDec)
             </th>
-            @*<th>
-            @Html.DisplayNameFor(model => model.CreationDate)
-        </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.DayNight)
             </th>
@@ -38,70 +44,6 @@
             <th>
                 Profondeur
             </th>
-            @*<th>
-            @Html.DisplayNameFor(model => model.Staff)
-        </th>*@
-            @*<th>
-            @Html.DisplayNameFor(model => model.Comment)
-        </th>*@
-
-            @*<th>
-            @Html.DisplayNameFor(model => model.Trip)
-        </th>*@
-            @*<th>
-            @Html.DisplayNameFor(model => model.T2LogId)
-        </th>*@
-            @*<th>
-            @Html.DisplayNameFor(model => model.SetTimeLocal)
-        </th>*@
-            @*<th>
-            @Html.DisplayNameFor(model => model.SchoolAssociationId)
-        </th>*@
-            @*<th>
-            @Html.DisplayNameFor(model => model.Latitude)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Longitude)
-        </th>*@
-            @*<th>
-            @Html.DisplayNameFor(model => model.SetEndDateLocal)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SetEndTimeLocal)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EndLatitude)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EndLongitude)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BaitList)
-        </th>*@
-            @*<th>
-            @Html.DisplayNameFor(model => model.EezSubcountryId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EezClosest)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LonghurstCode)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BetRegionId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SstCelsius)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BathyMeters)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OniNoaa)
-        </th>*@
-            @*<th>
-            @Html.DisplayNameFor(model => model.LogIdTubsOld)
-        </th>*@
             <th></th>
         </tr>
     </thead>
@@ -119,26 +61,35 @@
             <td>
                 @if (item.GearId == "K")
                 {
-                    @Html.DisplayFor(modelItem => item.SetBiological.BioSetNo)
-                    @:&nbsp;
-                    @Html.DisplayFor(modelItem => item.SetBiological.StationNo)
-                }
+                @Html.DisplayFor(modelItem => item.SetBiological.BioSetNo)
+                                }
                 else
                 {
-                    @Html.DisplayFor(modelItem => item.SetNo)
+                @Html.DisplayFor(modelItem => item.SetNo)
                 }
-
             </td>
-
+            <td>
+                @if (item.GearId == "K")
+                {
+                @Html.DisplayFor(modelItem => item.SetBiological.StationNo)
+                }
+                else {
+                @:WAL
+                @if (item.SetNo.ToString().Length == 3)
+                {
+                @item.SetNo.ToString().Substring(1,2)
+                }
+                else{
+                @item.SetNo.ToString().Substring(2,2)
+                }
+                }
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.LatitudeDec)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.LongitudeDec)
             </td>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.CreationDate)
-        </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.DayNightId)
                 @Html.DisplayFor(modelItem => item.SetBiological.DayNightId)
@@ -148,76 +99,8 @@
                 @Html.DisplayFor(modelItem => item.Gear.GearDesc)
             </td>
             <td>
-                @*@if (item.SetBiologicalZooplankton.DepthNo == 1)
-                {
-                @Html.DisplayFor(modelItem => item.SetBiologicalZooplankton.DepthMaxM)
-                        }*@
-
+                @*Trouver comment coder la temperature max*@
             </td>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.Staff.FullName)
-        </td>*@
-            @*<td>
-            @Html.DisplayFor(modelItem => item.Comment)
-        </td>*@
-            @*<td>
-            @Html.DisplayFor(modelItem => item.T2LogId)
-        </td>*@
-            @*<td>
-            @Html.DisplayFor(modelItem => item.Trip.TripName)
-        </td>*@
-            @*<td>
-            @Html.DisplayFor(modelItem => item.SetTimeLocal)
-        </td>*@
-            @*<td>
-            @Html.DisplayFor(modelItem => item.SchoolAssociationId)
-        </td>*@
-            @*<td>
-            @Html.DisplayFor(modelItem => item.Latitude)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Longitude)
-        </td>*@
-            @*<td>
-            @Html.DisplayFor(modelItem => item.SetEndDateLocal)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SetEndTimeLocal)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EndLatitude)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EndLongitude)
-        </td>*@
-            @*<td>
-            @Html.DisplayFor(modelItem => item.BaitList)
-        </td>*@
-            @*<td>
-            @Html.DisplayFor(modelItem => item.EezSubcountryId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EezClosest)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LonghurstCode)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BetRegionId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SstCelsius)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BathyMeters)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OniNoaa)
-        </td>*@
-            @*<td>
-            @Html.DisplayFor(modelItem => item.LogIdTubsOld)
-        </td>*@
-
             <td>
                 | <a asp-action="Details" asp-route-id="@item.SetBaseId">Détails</a> |
                 <a asp-controller="Fish" asp-route-setBaseId="@item.SetBaseId">Espèces</a>

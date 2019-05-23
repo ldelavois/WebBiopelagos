@@ -30,15 +30,15 @@ namespace WebBiopelagos.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            //services.AddDbContext<ApplicationDbContext>(options =>
+            //    options.UseSqlServer(
+            //        Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDefaultIdentity<IdentityUser>()
+            //    .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-            var connection = @"Server=SPC142130; Database=BioDaSys; Trusted_Connection=yes;";
+            
+            var connection = Configuration.GetConnectionString("WebBiopelagosWebContext");
             services.AddDbContext<BioDaSysContext>(options => options.UseSqlServer(connection));
         }
 

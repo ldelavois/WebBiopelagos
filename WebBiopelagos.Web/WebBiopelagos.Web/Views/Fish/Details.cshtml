@@ -10,17 +10,30 @@
     <h4>Espèces</h4>
     <hr />
     <dl class="dl-horizontal">
+
         <dt>
-            @Html.DisplayNameFor(model => model.TmpPredatorId)
+            @Html.DisplayNameFor(model => model.SetBase)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.TmpPredatorId)
+            @Html.DisplayFor(model => model.SetBaseId)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.CsiroId)
+            @Html.DisplayNameFor(model => model.FishId)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.CsiroId)
+            @Html.DisplayFor(model => model.FishId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FishType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FishType.FishTypeDesc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Species)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Species.ScientificName)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.SamplingDate)
@@ -29,130 +42,16 @@
             @Html.DisplayFor(model => model.SamplingDate)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.CatchTime)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.CatchTime)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.HookNo)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.HookNo)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.ReelNo)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ReelNo)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.DropNo)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.DropNo)
-        </dd>
-        <dt>
             @Html.DisplayNameFor(model => model.FishNo)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.FishNo)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.IsOfInterest)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.IsOfInterest)
-        </dd>
-        <dt>
             @Html.DisplayNameFor(model => model.OwnershipId)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.OwnershipId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.LengthMm)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.LengthMm)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.LengthMm2)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.LengthMm2)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.LengthMm3)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.LengthMm3)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.CalculatedWtGr)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.CalculatedWtGr)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.WeightGr)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.WeightGr)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.GonadWeightGr)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.GonadWeightGr)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Photo1)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Photo1)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Photo2)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Photo2)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Photo3)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Photo3)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Photo4)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Photo4)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.DataReceptionDate)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.DataReceptionDate)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PaiementDate)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PaiementDate)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Comment)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Comment)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.EnteredByOld)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.EnteredByOld)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.CreationDate)
@@ -176,44 +75,9 @@
             @Html.DisplayNameFor(model => model.EditorStaff)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.EditorStaff.CountryId)
+            @Html.DisplayFor(model => model.EditorStaff.FullName)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.EditorStaffId2Navigation)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.EditorStaffId2Navigation.CountryId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.FishType)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.FishType.FishTypeId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.LengthCode)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.LengthCode.LengthCodeId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.LengthCodeId2Navigation)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.LengthCodeId2Navigation.LengthCodeId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.LengthCodeId3Navigation)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.LengthCodeId3Navigation.LengthCodeId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.SetBase)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.SetBase.GearId)
-        </dd>
+        
         <dt>
             @Html.DisplayNameFor(model => model.Sex)
         </dt>
@@ -226,15 +90,8 @@
         <dd>
             @Html.DisplayFor(model => model.Species.ScientificName)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.WeightCode)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.WeightCode.WeightCodeId)
-        </dd>
     </dl>
 </div>
 <div>
-    @*<a asp-action="Edit" asp-route-id="@Model.FishId">Edit</a> |*@
     <a asp-action="Index">Retour</a>
 </div>

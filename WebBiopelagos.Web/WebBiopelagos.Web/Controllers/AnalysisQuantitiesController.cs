@@ -19,141 +19,49 @@ namespace WebBiopelagos.Web.Controllers
         }
 
         // GET: AnalysisQuantities
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? AnalysisId)
         {
-            var bioDaSysContext = _context.AnalysisQuantity.Include(a => a.Analysis);
-            return View(await bioDaSysContext.ToListAsync());
+            if (AnalysisId == null)
+            {
+                var bioDaSysContext = _context.AnalysisQuantity
+                    .Where(a => a.AnalysisBaseId > 111601)
+                    .Where(a => a.AnalysisBaseId < 111611)
+                    .Include(a => a.AnalysisType)
+                    .Include(a => a.Analysis);
+                return View(await bioDaSysContext.ToListAsync());
+
+            }
+
+            else 
+            {
+                var bioDaSysContext = _context.AnalysisQuantity
+                    .Where(a => a.AnalysisBaseId == AnalysisId)
+                    .Where(a => a.AnalysisBaseId > 111601)
+                    .Where(a => a.AnalysisBaseId < 111611)
+                    .Include(a => a.AnalysisType)
+                    .Include(a => a.Analysis);
+                return View(await bioDaSysContext.ToListAsync());
+
+            }
         }
 
         // GET: AnalysisQuantities/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int? QuantityId)
         {
-            if (id == null)
+            if (QuantityId == null)
             {
                 return NotFound();
             }
 
             var analysisQuantity = await _context.AnalysisQuantity
                 .Include(a => a.Analysis)
-                .FirstOrDefaultAsync(m => m.AnalysisBaseId == id);
+                .FirstOrDefaultAsync(m => m.AnalysisBaseId == QuantityId);
             if (analysisQuantity == null)
             {
                 return NotFound();
             }
 
             return View(analysisQuantity);
-        }
-
-        // GET: AnalysisQuantities/Create
-        public IActionResult Create()
-        {
-            ViewData["AnalysisBaseId"] = new SelectList(_context.AnalysisBase, "AnalysisBaseId", "AnalysisTypeId");
-            return View();
-        }
-
-        // POST: AnalysisQuantities/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AnalysisBaseId,QunatityValue,QuantityUnit,Comment,SubAnalysisType,AnalysisTypeId")] AnalysisQuantity analysisQuantity)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(analysisQuantity);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["AnalysisBaseId"] = new SelectList(_context.AnalysisBase, "AnalysisBaseId", "AnalysisTypeId", analysisQuantity.AnalysisBaseId);
-            return View(analysisQuantity);
-        }
-
-        // GET: AnalysisQuantities/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var analysisQuantity = await _context.AnalysisQuantity.FindAsync(id);
-            if (analysisQuantity == null)
-            {
-                return NotFound();
-            }
-            ViewData["AnalysisBaseId"] = new SelectList(_context.AnalysisBase, "AnalysisBaseId", "AnalysisTypeId", analysisQuantity.AnalysisBaseId);
-            return View(analysisQuantity);
-        }
-
-        // POST: AnalysisQuantities/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AnalysisBaseId,QunatityValue,QuantityUnit,Comment,SubAnalysisType,AnalysisTypeId")] AnalysisQuantity analysisQuantity)
-        {
-            if (id != analysisQuantity.AnalysisBaseId)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(analysisQuantity);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!AnalysisQuantityExists(analysisQuantity.AnalysisBaseId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["AnalysisBaseId"] = new SelectList(_context.AnalysisBase, "AnalysisBaseId", "AnalysisTypeId", analysisQuantity.AnalysisBaseId);
-            return View(analysisQuantity);
-        }
-
-        // GET: AnalysisQuantities/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var analysisQuantity = await _context.AnalysisQuantity
-                .Include(a => a.Analysis)
-                .FirstOrDefaultAsync(m => m.AnalysisBaseId == id);
-            if (analysisQuantity == null)
-            {
-                return NotFound();
-            }
-
-            return View(analysisQuantity);
-        }
-
-        // POST: AnalysisQuantities/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var analysisQuantity = await _context.AnalysisQuantity.FindAsync(id);
-            _context.AnalysisQuantity.Remove(analysisQuantity);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool AnalysisQuantityExists(int id)
-        {
-            return _context.AnalysisQuantity.Any(e => e.AnalysisBaseId == id);
         }
     }
 }

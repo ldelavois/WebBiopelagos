@@ -1029,7 +1029,7 @@ namespace WebBiopelagos.Web.Models
                     .HasColumnName("quantity_unit")
                     .HasMaxLength(40);
 
-                entity.Property(e => e.QunatityValue).HasColumnName("qunatity_value");
+                entity.Property(e => e.QuantityValue).HasColumnName("quantity_value");
 
                 entity.Property(e => e.SubAnalysisType)
                     .HasColumnName("sub_analysis_type")
