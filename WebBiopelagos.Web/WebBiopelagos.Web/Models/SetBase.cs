@@ -104,6 +104,7 @@ namespace WebBiopelagos.Web.Models
         public ICollection<Fish> Fish { get; set; }
         public ICollection<ForageItem> ForageItem { get; set; }
         public ICollection<SetBiologicalGearLink> SetBiologicalGearLink { get; set; }
+
         public ICollection<SetBiologicalStep> SetBiologicalStep { get; set; }
         public ICollection<SetBiologicalZooplankton> SetBiologicalZooplankton { get; set; }
     }

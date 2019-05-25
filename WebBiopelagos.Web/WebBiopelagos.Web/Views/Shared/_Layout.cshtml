@@ -33,10 +33,10 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="About">À propos</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                     <li><a asp-area="" asp-controller="SetBases" asp-action="Index">Opérations</a></li>
-                    <li><a asp-area="" asp-controller="Fish" asp-action="Index">Espèces</a></li>
+                    @*<li><a asp-area="" asp-controller="Fish" asp-action="Index">Espèces</a></li>
                     <li><a asp-area="" asp-controller="SampleBases" asp-action="Index">Echantillons</a></li>
-                    <li><a asp-area="" asp-controller="AnalysisBases" asp-action="Index">Analyses</a></li>
-                    <li><a asp-area="" asp-controller="AnalysisQuantities" asp-action="Index">Quantité</a></li>
+                    <li><a asp-area="" asp-controller="AnalysisBases" asp-action="Index">Analyses</a></li>*@
+                    <li><a asp-area="" asp-controller="AnalysisQuantities" asp-action="Index">Résultats</a></li>
 
                 </ul>
                 @*<partial name="_LoginPartial" />*@
@@ -50,7 +50,8 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2019 - BIOPELAGOS</p>
+            <p>&copy; 2019 - Projet BIOPELAGOS dirigé par <a href="mailto:ValerieA@spc.int">Valérie ALLAIN</a></p>
+            <p>Site web par <a href="mailto:ldelavois@outlook.fr">Ludovic DELAVOIS</a></p>
         </footer>
     </div>
 

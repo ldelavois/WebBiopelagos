@@ -10,9 +10,7 @@ $.get("js/wallalis.json",function(data) {
     L.geoJSON(data, {
     }).bindPopup(function (layer) {
         return "<b>Campagne Wallalis</b><br>" +
-            "Opération n°: <a asp-action='Details' asp-route-id='layer.feature.properties.set_base_id'>"
-            + layer.feature.properties.set_base_id +
-            "</a><br>" +
+            "Opération n°:<a href='./SetBases'>" + layer.feature.properties.set_base_id+"</a><br>" +
             "Coordonnées: [" + layer.feature.geometry.coordinates + "]<br>" +
             "Gear: " + layer.feature.properties.gear_id;
 
@@ -20,7 +18,7 @@ $.get("js/wallalis.json",function(data) {
 });
 
 
-
+//layer.feature.properties.set_base_id
 var Zooplankton = L.layerGroup();
 
 

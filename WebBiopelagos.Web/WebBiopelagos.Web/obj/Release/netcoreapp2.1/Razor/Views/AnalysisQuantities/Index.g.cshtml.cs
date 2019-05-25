@@ -77,7 +77,7 @@ using WebBiopelagos.Web.Models;
             WriteLiteral("</h2>\r\n\r\n<p>");
             EndContext();
             BeginContext(149, 113, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "59a758cc430d43d5954e0e32ce7cdfe9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2ce3cf21fab047cfba18af60007eba83", async() => {
                 BeginContext(205, 53, true);
                 WriteLiteral("<input type=\"submit\" value=\"Retour vers l\'accueil\" />");
                 EndContext();
@@ -162,7 +162,7 @@ using WebBiopelagos.Web.Models;
             WriteLiteral("        <tr>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(1042, 151, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d1254179eba9418fb9fc770d4af184f3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a24020ed69614d23a1fc38fdf3941a57", async() => {
                 BeginContext(1140, 49, false);
 #line 40 "C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\Views\AnalysisQuantities\Index.cshtml"
                                                                                                             Write(Html.DisplayFor(modelItem => item.AnalysisBaseId));
@@ -243,7 +243,7 @@ using WebBiopelagos.Web.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(1669, 79, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b9956b8fc4e1475e9899b80884483f38", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6e4088eb8e141adad7c49cf7e6a5ec3", async() => {
                 BeginContext(1737, 7, true);
                 WriteLiteral("Détails");
                 EndContext();

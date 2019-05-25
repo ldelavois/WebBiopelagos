@@ -45,6 +45,8 @@ namespace WebBiopelagos.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -67,7 +69,7 @@ namespace WebBiopelagos.Web
                 routes.MapRoute(
                     name: "default",
                     //template: "{controller=Home}/{id?}");
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "/{controller=Home}/{action=Index}/{id?}");
             });
 
             app.Run(async (context) => {

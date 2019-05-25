@@ -11,6 +11,7 @@ namespace WebBiopelagos.Web.Models
         public int AnalysisBaseId { get; set; }
 
         [Display(Name = "Valeur")]
+        [DisplayFormat(DataFormatString = "{0:0.0##}")]
         public double QuantityValue { get; set; }
 
         [Display(Name = "Unité")]
@@ -25,5 +26,6 @@ namespace WebBiopelagos.Web.Models
 
         public AnalysisBase Analysis { get; set; }
         public AnalysisType AnalysisType { get; set; }
+
     }
 }

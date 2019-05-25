@@ -64,7 +64,7 @@ using WebBiopelagos.Web.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(71, 16, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08d9b4679cf844fc97e304d27641a906", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b74a27ae188f47f09670271b19fa8b2e", async() => {
                 BeginContext(77, 3, true);
                 WriteLiteral("\r\n ");
                 EndContext();
@@ -84,7 +84,7 @@ using WebBiopelagos.Web.Models;
             WriteLiteral("\r\n\r\n\r\n");
             EndContext();
             BeginContext(93, 1167, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2ddd78856c54154adefec7a68f0a602", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "39e4ddb46279428d803ded9bdc17061a", async() => {
                 BeginContext(99, 10, true);
                 WriteLiteral("\r\n    <h2>");
                 EndContext();
@@ -99,7 +99,7 @@ using WebBiopelagos.Web.Models;
                 WriteLiteral("</h2>\r\n\r\n    <p>");
                 EndContext();
                 BeginContext(143, 113, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2fd9b6e08f247898a14a4af0b73bca5", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e1d6a5dea26a4b3294909694f183b516", async() => {
                     BeginContext(199, 53, true);
                     WriteLiteral("<input type=\"submit\" value=\"Retour vers l\'accueil\" />");
                     EndContext();

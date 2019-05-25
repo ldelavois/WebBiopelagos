@@ -27,7 +27,9 @@ namespace WebBiopelagos.Web.Controllers
                     .Where(a => a.AnalysisBaseId > 111601)
                     .Where(a => a.AnalysisBaseId < 111611)
                     .Include(a => a.AnalysisType)
+                    
                     .Include(a => a.Analysis);
+
                 return View(await bioDaSysContext.ToListAsync());
 
             }

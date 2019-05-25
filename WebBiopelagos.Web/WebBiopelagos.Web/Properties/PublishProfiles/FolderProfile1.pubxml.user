@@ -8,4 +8,9 @@ en modifiant ce fichier MSBuild. Pour en savoir plus à ce sujet, visitez https:
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>C:\Users\ludovicd\Desktop\website_BIOPELAGOS_Ludo</_PublishTargetUrl>
   </PropertyGroup>
+  <ItemGroup>
+    <File Include="wwwroot/js/wallalismap.js">
+      <publishTime>05/25/2019 11:35:07</publishTime>
+    </File>
+  </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<WebBiopelagos.Web.Models.AnalysisQuantity>
 
 @{
-    ViewData["Title"] = "Quantité";
+    ViewData["Title"] = "Résultats";
 }
 
     <h2>@ViewData["Title"]</h2>
@@ -13,8 +13,26 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.AnalysisBaseId)
+            </th>*@
+            <th>
+                ID Operation
+            </th>
+            <th>
+                Gear
+                @*@Html.DisplayNameFor(model => model.SetBase.Gear)*@
+            </th>
+
+            <th>
+                Profondeur(m)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.AnalysisTypeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubAnalysisType)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.QuantityValue)
@@ -22,29 +40,47 @@
             <th>
                 @Html.DisplayNameFor(model => model.QuantityUnit)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AnalysisTypeId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SubAnalysisType)
-            </th>
-
-            <th></th>
+            @*<th></th>*@
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
         <tr>
-            <td>
+            @*<td>
                 <a asp-controller="AnalysisBases" asp-action="Index" asp-route-AnalysisId="@item.AnalysisBaseId">@Html.DisplayFor(modelItem => item.AnalysisBaseId)</a>
-</td>
+            </td>*@
             <td>
-                @Html.DisplayFor(modelItem => item.QuantityValue)
+                @if (item.AnalysisBaseId == 111602 || item.AnalysisBaseId == 111607)
+                {<text>14822</text>}
+            else if (item.AnalysisBaseId == 111603 || item.AnalysisBaseId == 111608)
+            {<text>14823</text>}
+        else if (item.AnalysisBaseId == 111604 || item.AnalysisBaseId == 111609)
+        {<text>14824</text>}
+        else if (item.AnalysisBaseId == 111605 || item.AnalysisBaseId == 111610)
+        {<text>14826</text>}
+        else if (item.AnalysisBaseId == 111606)
+        {<text>14828</text>}
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.QuantityUnit)
+                @*valeur gear à coder*@
+                Zooplankton
             </td>
+
+            <td>
+                @*valeur profondeur à coder*@
+                @if (item.AnalysisBaseId == 111602 || item.AnalysisBaseId == 111607)
+                {<text>476</text>}
+            else if (item.AnalysisBaseId == 111603 || item.AnalysisBaseId == 111608)
+            {<text>620</text>}
+        else if (item.AnalysisBaseId == 111604 || item.AnalysisBaseId == 111609)
+        {<text>615</text>}
+    else if (item.AnalysisBaseId == 111605 || item.AnalysisBaseId == 111610)
+    {<text>597</text>}
+    else if (item.AnalysisBaseId == 111606)
+    {<text>598</text>}
+            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.AnalysisType.AnalysisTypeDesc)
             </td>
@@ -52,9 +88,15 @@
                 @Html.DisplayFor(modelItem => item.SubAnalysisType)
             </td>
             <td>
-                <a asp-action="Details" asp-route-QuantityId="@item.AnalysisBaseId">Détails</a>
+                @Html.DisplayFor(modelItem => item.QuantityValue)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantityUnit)
+            </td>
+            @*<td>
+            <a asp-action="Details" asp-route-QuantityId="@item.AnalysisBaseId">Détails</a>
+        </td>*@
         </tr>
-        }
+                }
     </tbody>
 </table>

@@ -18,10 +18,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.SetDateLocal)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]">@Html.DisplayNameFor(model => model.SetDateLocal) </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SetBaseId)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["SetBaseSortParm"]">@Html.DisplayNameFor(model => model.SetBaseId)</a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.SetNo)
@@ -39,7 +39,7 @@
                 @Html.DisplayNameFor(model => model.DayNight)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Gear)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["GearSortParm"]">@Html.DisplayNameFor(model => model.Gear)</a>
             </th>
             <th>
                 Profondeur
@@ -48,67 +48,115 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.SetDateLocal)
-                @Html.DisplayFor(modelItem => item.SetTimeLocal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SetBaseId)
-            </td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SetDateLocal)
+                    @Html.DisplayFor(modelItem => item.SetTimeLocal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SetBaseId)
+                </td>
 
-            <td>
-                @if (item.GearId == "K")
-                {
-                @Html.DisplayFor(modelItem => item.SetBiological.BioSetNo)
-                                }
-                else
-                {
-                @Html.DisplayFor(modelItem => item.SetNo)
-                }
-            </td>
-            <td>
-                @if (item.GearId == "K")
-                {
-                @Html.DisplayFor(modelItem => item.SetBiological.StationNo)
-                }
-                else {
-                @:WAL
-                @if (item.SetNo.ToString().Length == 3)
-                {
-                @item.SetNo.ToString().Substring(1,2)
-                }
-                else{
-                @item.SetNo.ToString().Substring(2,2)
-                }
-                }
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LatitudeDec)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LongitudeDec)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DayNightId)
-                @Html.DisplayFor(modelItem => item.SetBiological.DayNightId)
+                <td>
+                    @if (item.GearId == "K")
+                    {
+                        @Html.DisplayFor(modelItem => item.SetBiological.BioSetNo)
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.SetNo)
+                    }
+                </td>
+                <td>
+                    @if (item.GearId == "K")
+                    {
+                        @Html.DisplayFor(modelItem => item.SetBiological.StationNo)
+                    }
+                    else
+                    {
 
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gear.GearDesc)
-            </td>
-            <td>
-                @*Trouver comment coder la temperature max*@
-            </td>
-            <td>
-                | <a asp-action="Details" asp-route-id="@item.SetBaseId">Détails</a> |
-                <a asp-controller="Fish" asp-route-setBaseId="@item.SetBaseId">Espèces</a>
+                        @if (item.SetNo.ToString().Length == 3)
+                        {<text>WAL0</text>
+                        @item.SetNo.ToString().Substring(0, 1)
+                    }
+                    else
+                    {<text>WAL</text>
+                    @item.SetNo.ToString().Substring(0, 2)
+                }
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LatitudeDec)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LongitudeDec)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DayNightId)
+                    @Html.DisplayFor(modelItem => item.SetBiological.DayNightId)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gear.GearDesc)
+                </td>
+                <td>
+                    @*Trouver comment coder la profondeur max automatiquement*@
+                    @if (item.Gear.GearDesc == "Micronekton trawl")
+                    {
+                        @if (item.SetBaseId == 14490 || item.SetBaseId == 14493)
+                        {<text>220</text>}
+                    else if (item.SetBaseId == 14491)
+                    {<text>350</text>}
+                else if (item.SetBaseId == 14492 || item.SetBaseId == 14508)
+                {<text>550</text>}
+            else if (item.SetBaseId == 14494)
+            {<text>90</text>}
+            else if (item.SetBaseId == 14495 || item.SetBaseId == 14499)
+            {<text>30</text>}
+            else if (item.SetBaseId == 14496 || item.SetBaseId == 14497 || item.SetBaseId == 14506)
+            {<text>50</text>}
+            else if (item.SetBaseId == 14498)
+            {<text>330</text>}
+            else if (item.SetBaseId == 14500 || item.SetBaseId == 14503 || item.SetBaseId == 14505)
+            {<text>500</text>}
+            else if (item.SetBaseId == 14501)
+            {<text>200</text>}
+            else if (item.SetBaseId == 14502)
+            {<text>80</text>}
+            else if (item.SetBaseId == 14504)
+            {<text>120</text>}
+            else if (item.SetBaseId == 14507)
+            {<text>200</text>}
+                    }
+                    @if (item.Gear.GearId == "Z")
+                    {@if (item.SetBaseId == 14822)
+                        {<text>476</text>}
+                    else if (item.SetBaseId == 14823)
+                    {<text>620</text>}
+                else if (item.SetBaseId == 14824)
+                {<text>615</text>}
+            else if (item.SetBaseId == 14825)
+            {<text>100</text>}
+            else if (item.SetBaseId == 14826)
+            {<text>597</text>}
+                else if (item.SetBaseId == 14827)
+                {<text>120</text>}
+            else if (item.SetBaseId == 14828)
+            {<text>598</text>}
+                    
+                  }
+
+                </td>
+                <td>
+                    @*<a asp-action="Details" asp-route-id="@item.SetBaseId">Détails</a>*@
+                    | <a asp-controller="AnalysisQuantities">Résultats</a>
 
 
-            </td>
-        </tr>
-}
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
 
