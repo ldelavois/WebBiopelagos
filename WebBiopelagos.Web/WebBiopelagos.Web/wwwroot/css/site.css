@@ -44,3 +44,7 @@ body {
     height: 450px;
     width: auto;
 }
+
+button {
+    width: auto;
+}

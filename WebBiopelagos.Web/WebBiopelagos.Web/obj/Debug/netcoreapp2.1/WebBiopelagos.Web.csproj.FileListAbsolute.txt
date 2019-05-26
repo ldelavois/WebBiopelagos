@@ -118,7 +118,6 @@ C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\Fish\Details.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\Fish\Index.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\bin\Debug\netcoreapp2.1\wwwroot\js\wallalis.geojson
-C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\WebBiopelagos.Web.csprojAssemblyReference.cache
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\SetBiologicalZooplanktons\Create.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\SetBiologicalZooplanktons\Delete.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\SetBiologicalZooplanktons\Details.g.cshtml.cs
@@ -128,3 +127,4 @@ C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\AnalysisBases\Index.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\AnalysisQuantities\Details.g.cshtml.cs
 C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\Razor\Views\AnalysisQuantities\Index.g.cshtml.cs
+C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\obj\Debug\netcoreapp2.1\WebBiopelagos.Web.csprojAssemblyReference.cache

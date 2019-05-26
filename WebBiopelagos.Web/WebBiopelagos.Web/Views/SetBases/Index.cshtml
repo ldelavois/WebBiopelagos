@@ -5,14 +5,16 @@
 }
 
 <h2>@ViewData["Title"]</h2>
-<p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>
 <h3>Campagne Wallalis</h3>
-
+<p><a asp-area="" asp-controller="Home" asp-action="Index"><input type="submit" value="Retour vers l'accueil" /></a></p>
 <p>
-    <a asp-area="" asp-controller="SetBases" asp-action="">
-        <input type="submit" value="Voir toutes les données" />
+    <a asp-area="" asp-controller="AnalysisQuantities" asp-action="Index">
+        <input type="submit" value="Voir les résultats" />
     </a>
 </p>
+
+
+
 
 <table class="table">
     <thead>
@@ -113,22 +115,22 @@
                 {<text>550</text>}
             else if (item.SetBaseId == 14494)
             {<text>90</text>}
-            else if (item.SetBaseId == 14495 || item.SetBaseId == 14499)
-            {<text>30</text>}
-            else if (item.SetBaseId == 14496 || item.SetBaseId == 14497 || item.SetBaseId == 14506)
-            {<text>50</text>}
-            else if (item.SetBaseId == 14498)
-            {<text>330</text>}
-            else if (item.SetBaseId == 14500 || item.SetBaseId == 14503 || item.SetBaseId == 14505)
-            {<text>500</text>}
-            else if (item.SetBaseId == 14501)
-            {<text>200</text>}
-            else if (item.SetBaseId == 14502)
-            {<text>80</text>}
-            else if (item.SetBaseId == 14504)
-            {<text>120</text>}
-            else if (item.SetBaseId == 14507)
-            {<text>200</text>}
+        else if (item.SetBaseId == 14495 || item.SetBaseId == 14499)
+        {<text>30</text>}
+    else if (item.SetBaseId == 14496 || item.SetBaseId == 14497 || item.SetBaseId == 14506)
+    {<text>50</text>}
+else if (item.SetBaseId == 14498)
+{<text>330</text>}
+else if (item.SetBaseId == 14500 || item.SetBaseId == 14503 || item.SetBaseId == 14505)
+{<text>500</text>}
+else if (item.SetBaseId == 14501)
+{<text>200</text>}
+else if (item.SetBaseId == 14502)
+{<text>80</text>}
+else if (item.SetBaseId == 14504)
+{<text>120</text>}
+else if (item.SetBaseId == 14507)
+{<text>200</text>}
                     }
                     @if (item.Gear.GearId == "Z")
                     {@if (item.SetBaseId == 14822)
@@ -139,14 +141,14 @@
                 {<text>615</text>}
             else if (item.SetBaseId == 14825)
             {<text>100</text>}
-            else if (item.SetBaseId == 14826)
-            {<text>597</text>}
-                else if (item.SetBaseId == 14827)
-                {<text>120</text>}
-            else if (item.SetBaseId == 14828)
-            {<text>598</text>}
-                    
-                  }
+        else if (item.SetBaseId == 14826)
+        {<text>597</text>}
+    else if (item.SetBaseId == 14827)
+    {<text>120</text>}
+else if (item.SetBaseId == 14828)
+{<text>598</text>}
+
+                }
 
                 </td>
                 <td>

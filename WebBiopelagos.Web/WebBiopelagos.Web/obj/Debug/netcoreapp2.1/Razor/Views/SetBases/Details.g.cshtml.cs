@@ -75,7 +75,7 @@ Write(ViewData["Title"]);
             WriteLiteral(" - Opérations</h2>\r\n<p>");
             EndContext();
             BeginContext(135, 113, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ece488072394d7488b76c1d0449dbd7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4d8e57c6c50a4f33bcb14ba2882503f2", async() => {
                 BeginContext(191, 53, true);
                 WriteLiteral("<input type=\"submit\" value=\"Retour vers l\'accueil\" />");
                 EndContext();
@@ -101,7 +101,7 @@ Write(ViewData["Title"]);
             WriteLiteral("</p>\r\n<p>");
             EndContext();
             BeginContext(257, 96, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9e6e24cec5ce42618ef9fe6faff8476c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6bb9f07af8404514b74fe56329dd26be", async() => {
                 BeginContext(291, 58, true);
                 WriteLiteral("<input type=\"submit\" value=\"Retour vers les opérations\" />");
                 EndContext();
@@ -301,7 +301,7 @@ Write(ViewData["Title"]);
             WriteLiteral("    ");
             EndContext();
             BeginContext(2125, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4792cc47c4e149adbf9cc21fcbf68d95", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "80aeed6ed9364cb8bde1c54f0661a3ff", async() => {
                 BeginContext(2147, 6, true);
                 WriteLiteral("Retour");
                 EndContext();

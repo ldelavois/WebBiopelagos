@@ -5,9 +5,13 @@
 
 <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 <link rel="stylesheet" href="~/lib/leaflet/leaflet.css" asp-append-version="true" />
-    <script src="~/lib/leaflet/leaflet.js" asp-append-version="true"></script>
-    <script src="~/lib/jquery/dist/jquery-2.1.1.min.js"></script>
-    <script src="~/lib/leaflet/leaflet.ajax.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<script src="~/lib/leaflet/leaflet.js" asp-append-version="true"></script>
+<script src="~/lib/jquery/dist/jquery-2.1.1.min.js"></script>
+<script src="~/lib/leaflet/leaflet.ajax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
 
 
 
@@ -15,8 +19,15 @@
 <h3>@ViewData["Message"]</h3>
 <p><a asp-area="" asp-controller="SetBases" asp-action="Index"><input type="submit" value="Voir les données des opérations" /></a></p>
 <p>Si les points sur la carte ne s'affichent pas, veuillez cliquer <a asp-area="" asp-controller="Home" asp-action="Index">ici</a> ou ajouter /Home à la fin de l'URL</p>
-<div id="map">
+</br>
+<div class="btn-group">
+    <button type="button" id="all" class="btn btn-info">Tous</button>
+    <button type="button" id="zooplankton" class="btn btn-success">Zooplankton multi-net</button>
+    <button type="button" id="ctd" class="btn btn-danger">CTD/Water</button>
+    <button type="button" id="micronekton" class="btn btn-warning">Micronekton trawl</button>
 </div>
+
+<div id="map"></div>
 
 <script src="~/js/wallalismap.js" type="text/javascript"></script>
 
