@@ -204,7 +204,7 @@ using WebBiopelagos.Web.Models;
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(1464, 68, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "70b327f53ada48e996aa9b3d5ed7e0d6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a80d8e50f38346a8bec37811b1f1ea0a", async() => {
                 BeginContext(1524, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -239,7 +239,7 @@ using WebBiopelagos.Web.Models;
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(1540, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3bdddb2644ee43d6a3805e48ade9ceb7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6d85d6d3a88445d88381c16e4896dd30", async() => {
                 BeginContext(1562, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();

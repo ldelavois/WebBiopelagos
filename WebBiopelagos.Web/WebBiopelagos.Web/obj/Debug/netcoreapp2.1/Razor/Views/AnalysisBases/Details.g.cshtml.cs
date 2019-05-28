@@ -75,7 +75,7 @@ Write(ViewData["Title"]);
             WriteLiteral(" - Analyses</h2>\r\n<p>");
             EndContext();
             BeginContext(136, 113, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b6d0e165fcf74e28a2d2108df2c60c89", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a8c43f6231404ae1a4b658b68c489c6b", async() => {
                 BeginContext(192, 53, true);
                 WriteLiteral("<input type=\"submit\" value=\"Retour vers l\'accueil\" />");
                 EndContext();
@@ -101,7 +101,7 @@ Write(ViewData["Title"]);
             WriteLiteral("</p>\r\n<p>");
             EndContext();
             BeginContext(258, 94, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f26daf4a8fbc416a9000ecbdf655624e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "353d5bd5f4b44995bb8c9d0791de48dc", async() => {
                 BeginContext(292, 56, true);
                 WriteLiteral("<input type=\"submit\" value=\"Retour vers les analyses\" />");
                 EndContext();
@@ -285,7 +285,7 @@ Write(ViewData["Title"]);
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(1989, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d15869703e2e4e4e9c16c1d5b71df106", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a9b83e5ae59940f99b05da31ef79627a", async() => {
                 BeginContext(2011, 6, true);
                 WriteLiteral("Retour");
                 EndContext();

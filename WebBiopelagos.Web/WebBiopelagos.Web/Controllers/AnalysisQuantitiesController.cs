@@ -24,8 +24,8 @@ namespace WebBiopelagos.Web.Controllers
             if (AnalysisId == null)
             {
                 var bioDaSysContext = _context.AnalysisQuantity
-                    .Where(a => a.AnalysisBaseId > 111601)
-                    .Where(a => a.AnalysisBaseId < 111611)
+                    .Where(a => a.AnalysisBaseId > 111619)
+                    .Where(a => a.AnalysisBaseId < 111630)
                     .Include(a => a.AnalysisType)
                     
                     .Include(a => a.Analysis);

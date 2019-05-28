@@ -1,118 +1,115 @@
-﻿// initialize the map
-var map = L.map('map', { center: [-13.19658, 183.60855], zoom: 7 });
+﻿var mapboxTiles = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+});
+
+var zooplanktonIcon = L.AwesomeMarkers.icon({
+    prefix: 'fa',
+    markerColor: 'green',
+    icon: 'circle'
+});
+
+var ctdIcon = L.AwesomeMarkers.icon({
+    prefix: 'fa',
+    markerColor: 'orange',
+    icon: 'circle'
+});
+
+var micronektonIcon = L.AwesomeMarkers.icon({
+    prefix: 'fa',
+    markerColor: 'red',
+    icon: 'circle'
+});
+
+var map = L.map('map')
+    .addLayer(mapboxTiles)
+    .setView([-13.19658, 183.60855], 7);
 
 // load a tile layer
 L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-var scale = L.control.scale(); // Creating scale control
-scale.addTo(map); // Adding scale control to the map
+// EEZs / Nations
+var eezLayer = L.tileLayer('http://tile1.mpatlas.org/tilecache/eezs/{z}/{x}/{y}.png', {
+    tms: true,
+    opacity: 0.3
+}).addTo(map);
+
+var promise = $.getJSON("js/wallalis.json");
+promise.then(function (data) {
+    var all = L.geoJson(data);
+    var zooplankton = L.geoJson(data, {
+        filter: function (feature, layer) {
+            return feature.properties.gear_id == "Zooplankton multi-net";
+        },
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {
+                icon: zooplanktonIcon
+            }).bindPopup("<b>Campagne Wallalis</b><br>"
+                + "Opération n°: <a href='./SetBases'>" + feature.properties.set_base_id + "</a><br>"
+                + "Coordonnées: [" + feature.geometry.coordinates + "]<br>" +
+                "Gear: " + feature.properties.gear_id).openPopup();
+        }
+    });
+    var ctd = L.geoJson(data, {
+        filter: function (feature, layer) {
+            return feature.properties.gear_id == "CTD/Water";
+        },
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {
+                icon: ctdIcon
+            }).bindPopup("<b>Campagne Wallalis</b><br>"
+            + "Opération n°: <a href='./SetBases'>" + feature.properties.set_base_id + "</a><br>"
+            + "Coordonnées: [" + feature.geometry.coordinates + "] <br> " +
+                "Gear: " + feature.properties.gear_id).openPopup();
+
+        }
+    });
+
+    var micronekton = L.geoJson(data, {
+        filter: function (feature, layer) {
+            return feature.properties.gear_id == "Micronekton trawl";
+        },
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {
+                icon: micronektonIcon
+            }).bindPopup("<b>Campagne Wallalis</b><br>"
+            + "Opération n°: <a href='./SetBases'>" + feature.properties.set_base_id + "</a><br>"
+            + "Coordonnées: [" + feature.geometry.coordinates + "] <br> " +
+                "Gear: " + feature.properties.gear_id).openPopup();
+
+        }
+    });
 
 
-$.get("js/wallalis.json", function (data) {
-    L.geoJSON(data, {
-    }).bindPopup(function (layer) {
-        return "<b>Campagne Wallalis</b><br>" +
-            "Opération n°:<a href='./SetBases'>" + layer.feature.properties.set_base_id + "</a><br>" +
-            "Coordonnées: [" + layer.feature.geometry.coordinates + "]<br>" +
-            "Gear: " + layer.feature.properties.gear_id;
+    map.fitBounds(all.getBounds(), {
+        padding: [50, 50]
+    });
+    zooplankton.addTo(map)
+    ctd.addTo(map)
+    micronekton.addTo(map)
+    // The JavaScript below is new    
+    $("#all").click(function () {
+        map.addLayer(zooplankton)
+        map.addLayer(ctd)
+        map.addLayer(micronekton)
+    });
 
-    }).addTo(map);
+    $("#zooplankton").click(function () {
+        map.addLayer(zooplankton)
+        map.removeLayer(ctd)
+        map.removeLayer(micronekton)
+    });
+    $("#ctd").click(function () {
+        map.addLayer(ctd)
+        map.removeLayer(zooplankton)
+        map.removeLayer(micronekton)
+    });
+
+    $("#micronekton").click(function () {
+        map.addLayer(micronekton)
+        map.removeLayer(ctd)
+        map.removeLayer(zooplankton)
+    });
+
 });
-
-
-
-////codage des filtres
-//var zooplanktonIcon = L.AwesomeMarkers.icon({
-//    prefix: 'fa',
-//    markerColor: 'green',
-//    icon : 'circle'
- 
-//});
-
-//var ctdIcon = L.AwesomeMarkers.icon({
-//    prefix: 'fa',
-//    markerColor: 'red',
-//    icon: 'circle'
-//});
-
-//var micronektonIcon = L.AwesomeMarkers.icon({
-//    prefix: 'fa',
-//    markerColor: 'orange',
-//    icon: 'circle'
-//});
-
-
-//var jsonFile = $.getJSON("js/wallalis.json");
-//jsonFile.then(function (data) {
-//    var all = L.geoJSON(data);
-//    var zooplankton = L.geoJson(data, {
-//        filter: function (layer) {
-//            return layer.feature.properties.gear_id == "Zooplankton multi-net";
-//        },
-//        pointToLayer: function (latlng) {
-//            return L.marker(latlng, {
-//                icon: zooplanktonIcon
-//            });
-//        }
-//    });
-
-//    var ctd = L.geoJson(data, {
-//        filter: function (layer) {
-//            return layer.feature.properties.gear_id == "CTD/Water";
-//        },
-//        pointToLayer: function (latlng) {
-//            return L.marker(latlng, {
-//                icon: ctdIcon
-//            });
-//        }
-//    });
-
-//    var micronekton = L.geoJson(data, {
-//        filter: function (layer) {
-//            return layer.feature.properties.gear_id == "Micronekton trawl";
-//        },
-//        pointToLayer: function (latlng) {
-//            return L.marker(latlng, {
-//                icon: micronektonIcon
-//            });
-//        }
-//    });
-
-
-
-//    map.fitBounds(all.getBounds(), {
-//        padding: [50, 50]
-//    });
-//    zooplankton.addTo(map)
-//    ctd.addTo(map)
-//    micronekton.addTo(map)
-
-//    // The JavaScript below is new
-//    $("#all").click(function () {
-//        map.addLayer(all)
-//    });
-//    $("#zooplankton").click(function () {
-//        map.addLayer(zooplankton)
-//        map.removeLayer(all)
-//        map.removeLayer(ctd)
-//        map.removeLayer(micronekton)
-//    });
-
-//    $("#ctd").click(function () {
-//        map.addLayer(ctd)
-//        map.removeLayer(all)
-//        map.removeLayer(zooplankton)
-//        map.removeLayer(micronekton)
-//    });
-
-//    $("#micronekton").click(function () {
-//        map.addLayer(micronekton)
-//        map.removeLayer(all)
-//        map.removeLayer(zooplankton)
-//        map.removeLayer(ctd)
-
-//    });
-
-//});

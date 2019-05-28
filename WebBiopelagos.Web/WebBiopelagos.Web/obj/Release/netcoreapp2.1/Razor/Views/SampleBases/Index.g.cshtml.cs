@@ -79,7 +79,7 @@ Write(ViewData["Title"]);
             WriteLiteral("</h2>\r\n<p>");
             EndContext();
             BeginContext(141, 113, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7412612847e440ea8a942585651b3806", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ff32df35b9b4466a8a387564cbdfd81b", async() => {
                 BeginContext(197, 53, true);
                 WriteLiteral("<input type=\"submit\" value=\"Retour vers l\'accueil\" />");
                 EndContext();
@@ -105,7 +105,7 @@ Write(ViewData["Title"]);
             WriteLiteral("</p>\r\n<h3>Campagne Wallalis</h3>\r\n\r\n<p>");
             EndContext();
             BeginContext(293, 115, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "30f45703328a4d4d8c16999d520a4236", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a936889065114f0b99d58fe2add71745", async() => {
                 BeginContext(349, 55, true);
                 WriteLiteral("<input type=\"submit\" value=\"Retour vers les espèces\" />");
                 EndContext();
@@ -131,7 +131,7 @@ Write(ViewData["Title"]);
             WriteLiteral("</p>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(425, 133, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7a17301b23a143bea0f5f5afc10db125", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "679915430c5c479abb2c93d0493ba115", async() => {
                 BeginContext(483, 71, true);
                 WriteLiteral("\r\n        <input type=\"submit\" value=\"Voir toutes les données\" />\r\n    ");
                 EndContext();
@@ -414,7 +414,7 @@ Write(ViewData["Title"]);
             WriteLiteral("        <tr>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(4093, 132, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "adb3f67c06da450dae9ddb054c891d16", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21214587040f473882a6cc0552654357", async() => {
                 BeginContext(4175, 46, false);
 #line 126 "C:\Users\ludovicd\source\repos\WebBiopelagos\WebBiopelagos.Web\WebBiopelagos.Web\Views\SampleBases\Index.cshtml"
                                                                                             Write(Html.DisplayFor(modelItem => item.Fish.FishId));
@@ -693,7 +693,7 @@ Write(ViewData["Title"]);
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n\r\n                ");
             EndContext();
             BeginContext(7652, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "13d816bb19d949ebbd9129436e25f8a8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3022bf450d614ba6973637c8ae72a3dd", async() => {
                 BeginContext(7710, 7, true);
                 WriteLiteral("Détails");
                 EndContext();
