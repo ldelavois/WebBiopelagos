@@ -8,3 +8,5 @@ Used MVC architecture and Leaflet JavaScript library for interactive maps.
 Website available [here](http://spc.int/BiopelagosWFData/).
 
 ## Preview
+
+![Screenshot](preview_spc_biopelagoswfdata.JPG)
